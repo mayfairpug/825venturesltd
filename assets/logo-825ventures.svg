@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="980" height="220" viewBox="0 0 980 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="825 Ventures Ltd">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D6B57C"/>
+      <stop offset="1" stop-color="#8E6C39"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Emblem: vintage handset + instant frame -->
+  <g transform="translate(26,34)">
+    <rect x="0" y="0" width="132" height="132" rx="24" fill="#0B0F14" stroke="url(#gold)" stroke-width="2"/>
+    <!-- handset -->
+    <path d="M36 54c6-6 14-6 20 0l6 6c3 3 3 8 0 11l-5 5c8 14 18 24 32 32l5-5c3-3 8-3 11 0l6 6c6 6 6 14 0 20l-6 6c-4 4-10 6-16 4c-26-10-50-34-60-60c-2-6 0-12 4-16l6-6z"
+          fill="none" stroke="rgba(214,181,124,0.85)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- instant frame with 825 -->
+    <rect x="28" y="86" width="76" height="34" rx="9" fill="none" stroke="rgba(214,181,124,0.65)" stroke-width="2"/>
+    <text x="66" y="110" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" fill="url(#gold)" letter-spacing="1">825</text>
+    <!-- subtle crest dot -->
+    <circle cx="36" cy="30" r="5" fill="rgba(214,181,124,0.55)"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(182,62)">
+    <text x="0" y="54" font-family="Georgia, 'Times New Roman', serif" font-size="56" fill="#0B0F14" letter-spacing="0.6">825 Ventures</text>
+    <text x="0" y="96" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="14" fill="#4C5562" letter-spacing="2">LTD</text>
+    <path d="M0 112 H560" stroke="rgba(176,141,87,0.45)" stroke-width="1"/>
+    <text x="0" y="140" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="14" fill="#4C5562" letter-spacing="1.2">Private investment • Cultural assets • Stewardship</text>
+  </g>
+</svg>
