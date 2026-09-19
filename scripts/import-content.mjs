@@ -12,6 +12,8 @@ function normaliseRoute(path){
 }
 Object.assign(routeAliases,{'jewellery-photography':'jewellery','portrait-photography':'portraits','sports-photography':'sport','london-photography':'london','bathroom-and-bathing':'bathroom-bathing','musicians-and-bands':'music'});
 const collectionGroups=[{start:78,end:87,id:'garden-botanical',label:'Garden and botanical'},{start:88,end:99,id:'hair-grooming',label:'Hair and grooming'}];
+collectionGroups.push({start:100,end:109,id:'interiors-design',label:'Interiors and design'});
+Object.assign(routeAliases,{'toys-and-childhood':'toys-childhood','kitchen-and-tableware':'kitchen-tableware','haberdashery-and-textiles':'haberdashery-textiles','silver-and-decorative-objects':'silver-objects','gifts-and-wrapping':'gifts-wrapping','stationery-and-writing':'stationery-writing','books-and-publishing':'books-publishing','bedrooms-and-sleep':'bedrooms-sleep'});
 function readSource(raw,filename,record=false){
   raw=raw.replace(/\r\n/g,'\n');
   const frontmatter=raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/);
@@ -30,7 +32,7 @@ function readSource(raw,filename,record=false){
   const related=[...relatedSection.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)].map(([,label,url])=>({label,url:normaliseRoute(url)}));
   const sourceNumber=Number(filename.match(/^\d+/)?.[0]);
   const group=collectionGroups.find(g=>sourceNumber>=g.start&&sourceNumber<=g.end);
-  if(group)related.push({label:group.label,url:'/photography-archive/'+group.id+'/'});
+  if(group&&!related.some(r=>r.url==='/photography-archive/'+group.id+'/'))related.push({label:group.label,url:'/photography-archive/'+group.id+'/'});
   let body=raw.slice(raw.indexOf('\n## ')+1).split('\n## Related Archive.London collections')[0];
   body=body.replace(/^- \*\*Physical location:\*\*[^\n]*\n/gm,'');
   if(record)changes.push({file:filename,reason:'Read labelled Markdown metadata; keep image guidance, sample schema and storage locations in private source; render related collections through the site template.',originalSuggestedPath:suggested,publishedPath:normaliseRoute(suggested)});
@@ -42,8 +44,16 @@ Object.assign(additionalNames,{61:'Antiques and historic objects',62:'Cameras an
 Object.assign(additionalNames,{69:'Beach and pool life',70:'Bicycles and cycling',71:'Camping and outdoor life',72:'Crime and detection',73:'DIY, tools and construction',74:'Easter',75:'Fire, flames and fireplaces',76:'Fireworks and night scenes',77:'Gambling and games of chance'});
 Object.assign(additionalNames,{78:'Garden ornament, barbecues and outdoor details',79:'Flower bouquets and arrangements',80:'Dried, artificial and withered flowers',81:'Flowers and botanical studies',82:'Single flowers and buttonholes',83:'Garden furniture and outdoor living',84:'Leaves and foliage studies',85:'Garden pots and planters',86:'Potted plants and indoor greenery',87:'Garden tools and equipment'});
 Object.assign(additionalNames,{88:'Hair clips, grips and pins',89:'Hair combs, pins and hairstyles',90:'Hair ties and elastics',91:'Headbands',92:'Fascinators, extensions and styling accessories',93:'Barber shops and barbering culture',94:'Hair brushes and combs',95:'Hair colourants and dye',96:'Hair dryers and electrical styling appliances',97:'Shampoo and conditioner',98:'Hair styling products',99:'Hair treatments'});
+Object.assign(additionalNames,{100:'Animal ornaments and decorative objects',101:'Baskets and bins',102:'Decorative bowls, dishes and plates',103:'Boxes, storage and trinket boxes',104:'Designer chairs, sofas and chaise longues',105:'Cupboards, screens and magazine racks',106:'Curtains, hangings and interior textiles',107:'Cushions and bolsters',108:'Door handles, letterboxes and house numbers',109:'Doormats and boot scrapers'});
 const names=['Archive.London','Photography archive','Robert Harper','Fashion','Jewellery','Beauty and cosmetics','Fragrance','Portraits','Musicians and bands','London','Scotland','Places and travel','Designer footwear','Handbags and bags','Watches','Food','Drinks','Interiors and design','Polaroids','Analogue photography','Motor racing','Aviation','Garden and botanical','Marine and superyachts','Kitchen and tableware','Bathroom and bathing','Hair and grooming','Toys and childhood','Sport','Landscapes','Corporate and technology','Weddings','Advertising'];
 const edits=[
+  [/Archive\.London should make that connection as career context, without attributing an unidentified basket or bin to either retailer\./g,'This career context does not establish a retailer or commission for an unidentified basket or bin.'],
+  [/Archive\.London should resist the flatness of catalogue presentation\./g,'The collection presents furniture through Harper’s editorial approach.'],
+  [/Archive\.London can therefore position the collection at the meeting point of clothing, interiors and editorial image making, supported by evidence rather than loose analogy\./g,'The collection connects clothing, interiors and editorial image making through Harper’s work with fabric, texture and light.'],
+  [/For AI research and visual search, accurate category language combined with Harper’s authorship and career context makes the material discoverable without reducing it to stock imagery\./g,'The catalogue descriptions and Harper’s career context provide starting points for research into individual photographs.'],
+  [/Archive\.London can position this collection as visual evidence of designed British life\./g,'The collection offers visual evidence of designed British life.'],
+  [/It is a small category with an unusually strong frame depth, suggesting sustained attention to angle, wording, texture and setting\./g,'It is a small category with a larger set of recorded frames. The counts alone do not establish how angle, wording, texture or setting varied.'],
+  [/Archive\.London should present the group with warmth and wit while retaining provenance\./g,'The group combines domestic humour with a record of everyday design.'],
   [/The ratio of frames to finished ideas preserves subtle decisions of angle and placement, particularly important for an object whose effect changes completely when worn\./g,'The frame count records the broader set of exposures. Angle and placement can be explored through the photographs, particularly for an accessory whose effect changes when worn.'],
   [/The relationship should be understood as a formative professional apprenticeship, not a vague stylistic comparison\./g,'This was a formative professional apprenticeship.'],
   [/Archive\.London should present the sequence with the respect due to a piece of lived history\./g,'The collection is presented as a record of lived history.'],
@@ -160,7 +170,7 @@ for(const filename of (await fs.readdir('content/source')).sort()){
   if(filename.startsWith('72_')) meta.meta_description="Explore Robert Harper's crime and detection photography collection, containing 8 unique photographs across 30 frames.";
   if(meta.meta_title!==sourceMetaTitle)changes.push({file:filename,field:'meta_title',original:sourceMetaTitle,replacement:meta.meta_title,reason:'Keep the search title concise while preserving its subject.'});
   if(meta.meta_description!==sourceMetaDescription)changes.push({file:filename,field:'meta_description',original:sourceMetaDescription,replacement:meta.meta_description,reason:'Describe an object association without asserting unverified personal ownership.'});
-  const index=Number(filename.slice(0,2))-1;
+  const index=Number(filename.match(/^\d+/)?.[0])-1;
   const path=new URL(meta.url).pathname;
   const title=names[index]||additionalNames[index+1];
   if(!title)throw Error('Unregistered source file: '+filename);
