@@ -4,9 +4,19 @@ import {parse} from 'yaml';
 // Import the explicitly supplied batch only. Source notes never enter the public build.
 const changes=[];
 const pages=[];
-const additionalNames={34:'Cats',35:'Candles and light',36:'Eyewear',37:'Stationery and writing',38:'Music objects and audio',39:'Books and publishing',41:'Art and artists’ materials',42:'Christmas'};
+const additionalNames={34:'Cats',35:'Candles and light',36:'Eyewear',37:'Stationery and writing',38:'Music objects and audio',39:'Books and publishing',41:'Art and artists’ materials',42:'Christmas',43:'Telephones and communication',44:'Transport',45:'Water and underwater',46:'Travel goods and accessories',47:'Silver and decorative objects',48:'Smoking and tobacco culture',49:'Parties and entertaining',50:'Bedrooms and sleep',51:'Pet accessories'};
 const names=['Archive.London','Photography archive','Robert Harper','Fashion','Jewellery','Beauty and cosmetics','Fragrance','Portraits','Musicians and bands','London','Scotland','Places and travel','Designer footwear','Handbags and bags','Watches','Food','Drinks','Interiors and design','Polaroids','Analogue photography','Motor racing','Aviation','Garden and botanical','Marine and superyachts','Kitchen and tableware','Bathroom and bathing','Hair and grooming','Toys and childhood','Sport','Landscapes','Corporate and technology','Weddings','Advertising'];
 const edits=[
+  [/Detailed claims must be confirmed at image level, but the material clearly belongs to an era when mobility itself was the attraction\./g,'The catalogue wording is a starting point for research into individual devices and dates, during an era when mobility itself was the attraction.'],
+  [/although individual locations must never be assumed without evidence/g,'while the locations of individual photographs remain separate questions for research'],
+  [/Michael Palin's satchel/g,'a satchel associated in the catalogue with Michael Palin'],
+  [/A satchel is more interesting when one knows it travelled with a familiar writer and broadcaster\./g,'A satchel associated with a familiar writer and broadcaster offers a starting point for research into the object and its journeys.'],
+  [/It should receive a separate page only when the photographs and supporting catalogue evidence allow accurate identification\./g,'Its identification and context require examination of the photographs and supporting catalogue evidence.'],
+  [/The accessories page provides/g,'The accessories collection provides'],
+  [/Charlie Chaplin's pipe/g,'a pipe associated in the catalogue with Charlie Chaplin'],
+  [/These images should be presented as cultural and design history, never as encouragement\./g,'These images are presented as cultural and design history.'],
+  [/The Charlie Chaplin reference may justify an individual page after the object and its documentation are verified\. No expanded provenance should be stated from the inventory label alone\./g,'The Charlie Chaplin catalogue association requires further object-level research; the label alone does not establish personal ownership or an object history.'],
+  [/Because the dedicated total is small, this page should function as an editorial junction, bringing related entertaining material together without falsely adding their counts\./g,'The dedicated collection connects to the wider entertaining material. Its count remains separate from the food, drinks, candles and tableware holdings.'],
   [/The art page should connect those strands without claiming that every related image belongs to this precise inventory total\./g,'These strands connect art to the wider archive; related photographs outside this section are not included in its stated total.'],
   [/first published concert image/g,'first sold concert photograph'],
   [/Selected fashion photographs will be added as image review and digitisation progress\./g,'Fashion image selection can be discussed through a professional enquiry.'],
@@ -58,10 +68,14 @@ for(const filename of (await fs.readdir('content/source')).sort()){
   const raw=await fs.readFile('content/source/'+filename,'utf8');
   const [,front,body]=raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/);
   const meta=parse(front);
+  const sourceMetaDescription=meta.meta_description;
   let copy=body.trim();
   for(const [pattern,replacement] of edits){copy=copy.replace(pattern,match=>{changes.push({file:filename,original:match,replacement,reason:'Convert production guidance to reader-facing language or qualify an unverified assertion.'});return replacement;});}
   copy=copy.replace(/[\u2013\u2014]/g,',').replace(/\n{3,}/g,'\n\n');
   if(filename.startsWith('15_')) meta.meta_description="Explore Robert Harper's watch photography, including designer timepieces, Swatch, Mackintosh-related designs and TAG Heuer Monaco catalogue material.";
+  if(filename.startsWith('46_')) meta.meta_description="Explore 151 travel-accessory photographs by Robert Harper, including maps, globes, luggage and a satchel catalogued in association with Michael Palin.";
+  if(filename.startsWith('48_')) meta.meta_description="Explore 96 historical smoking photographs by Robert Harper, including pipes, lighters, cigars, cigarettes and material associated with Charlie Chaplin.";
+  if(meta.meta_description!==sourceMetaDescription)changes.push({file:filename,field:'meta_description',original:sourceMetaDescription,replacement:meta.meta_description,reason:'Describe an object association without asserting unverified personal ownership.'});
   const index=Number(filename.slice(0,2))-1;
   const path=new URL(meta.url).pathname;
   const title=names[index]||additionalNames[index+1];

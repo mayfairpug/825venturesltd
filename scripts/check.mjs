@@ -59,6 +59,15 @@ for(const p of register)check(urls.includes('https://archive.london'+p.path),`Mi
 const linked=new Set();for(const [,$] of documents)$('a[href^="/"]').each((_,e)=>linked.add(e.attribs.href.split(/[?#]/)[0]));
 for(const p of register)check(linked.has(p.path),`Orphan ${p.path}`);
 check(register.filter(p=>sources.some(s=>s.path===p.path)).length===sources.length,'Not all supplied pages rendered');
+const normalise=text=>text.replace(/\s+/g,' ').trim();
+for(const source of sources){
+ const visible=normalise(documents.get(source.path)('main').text());
+ for(const block of source.body.split(/\n\s*\n/)){
+  if(!block||/^[#<\[-]/.test(block)||/^\*\*Archive/.test(block))continue;
+  const text=normalise(block.replace(/\*\*/g,''));
+  if(text.length>100)check(visible.includes(text),`${source.path}: substantive source paragraph omitted: ${text.slice(0,80)}`);
+ }
+}
 const openings=new Map(),paragraphs=new Map();const similarity=[];
 const articles=sources.map(p=>{const $=documents.get(p.path);const body=$('article.prose').clone();body.find('.directory').remove();const text=body.text().toLowerCase();const words=text.match(/[a-z]+/g)||[];const grams=new Set(words.slice(0,-4).map((_,i)=>words.slice(i,i+5).join(' ')));const first=body.find('p').first().text();if(openings.has(first))warnings.push(`Repeated opening: ${p.path} and ${openings.get(first)}`);openings.set(first,p.path);body.find('p').each((_,e)=>{const para=$(e).text();if(para.length<180)return;const seen=paragraphs.get(para)||[];seen.push(p.path);paragraphs.set(para,seen);});return {p,grams};});
 for(let i=0;i<articles.length;i++)for(let j=i+1;j<articles.length;j++){const a=articles[i],b=articles[j];const common=[...a.grams].filter(x=>b.grams.has(x)).length;const score=common/(a.grams.size+b.grams.size-common);similarity.push({a:a.p.path,b:b.p.path,jaccardFiveWord:Math.round(score*10000)/10000});if(score>.25)warnings.push(`High editorial similarity: ${a.p.path} / ${b.p.path}`);}
