@@ -10,6 +10,8 @@ function normaliseRoute(path){
   const slug=path.split('/').filter(Boolean).at(-1);
   return '/photography-archive/'+(routeAliases[slug]||slug)+'/';
 }
+Object.assign(routeAliases,{'jewellery-photography':'jewellery','portrait-photography':'portraits','sports-photography':'sport','london-photography':'london','bathroom-and-bathing':'bathroom-bathing','musicians-and-bands':'music'});
+const collectionGroups=[{start:78,end:87,id:'garden-botanical',label:'Garden and botanical'},{start:88,end:99,id:'hair-grooming',label:'Hair and grooming'}];
 function readSource(raw,filename,record=false){
   raw=raw.replace(/\r\n/g,'\n');
   const frontmatter=raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/);
@@ -19,14 +21,16 @@ function readSource(raw,filename,record=false){
   const suggested=field('Suggested URL')?.replaceAll('`','');
   const title=field('Meta title'),description=field('Meta description');
   const unique=raw.match(/\*\*Unique shots:\*\* (\d+)/)?.[1];
-  const frames=raw.match(/\*\*Total frames and variants:\*\* (\d+)/)?.[1];
+  const frames=raw.match(/\*\*Total frames(?: and variants)?:\*\* (\d+)/)?.[1];
   const relatedSection=raw.match(/## Related Archive\.London collections\n([\s\S]*?)(?=\n## |$)/)?.[1];
   const schema=raw.match(/## Structured data\s*```json\s*([\s\S]*?)```/)?.[1];
   if(!h1||!suggested||!title||!description||!unique||!frames||!relatedSection||!schema)throw Error('Incomplete labelled Markdown source: '+filename);
   const suppliedSchema=JSON.parse(schema);
   if(suppliedSchema.numberOfItems!==Number(unique))throw Error('Source count mismatch: '+filename);
   const related=[...relatedSection.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)].map(([,label,url])=>({label,url:normaliseRoute(url)}));
-  related.push({label:'Garden and botanical',url:'/photography-archive/garden-botanical/'});
+  const sourceNumber=Number(filename.match(/^\d+/)?.[0]);
+  const group=collectionGroups.find(g=>sourceNumber>=g.start&&sourceNumber<=g.end);
+  if(group)related.push({label:group.label,url:'/photography-archive/'+group.id+'/'});
   let body=raw.slice(raw.indexOf('\n## ')+1).split('\n## Related Archive.London collections')[0];
   body=body.replace(/^- \*\*Physical location:\*\*[^\n]*\n/gm,'');
   if(record)changes.push({file:filename,reason:'Read labelled Markdown metadata; keep image guidance, sample schema and storage locations in private source; render related collections through the site template.',originalSuggestedPath:suggested,publishedPath:normaliseRoute(suggested)});
@@ -37,8 +41,18 @@ Object.assign(additionalNames,{52:'Gifts and wrapping',53:'Haberdashery and text
 Object.assign(additionalNames,{61:'Antiques and historic objects',62:'Cameras and film',63:'Film memorabilia and stars',64:'Newspapers and press',65:'Television, video and DVD',66:'Clocks and timepieces',67:'Awards and trophies',68:'Badges, pins and insignia'});
 Object.assign(additionalNames,{69:'Beach and pool life',70:'Bicycles and cycling',71:'Camping and outdoor life',72:'Crime and detection',73:'DIY, tools and construction',74:'Easter',75:'Fire, flames and fireplaces',76:'Fireworks and night scenes',77:'Gambling and games of chance'});
 Object.assign(additionalNames,{78:'Garden ornament, barbecues and outdoor details',79:'Flower bouquets and arrangements',80:'Dried, artificial and withered flowers',81:'Flowers and botanical studies',82:'Single flowers and buttonholes',83:'Garden furniture and outdoor living',84:'Leaves and foliage studies',85:'Garden pots and planters',86:'Potted plants and indoor greenery',87:'Garden tools and equipment'});
+Object.assign(additionalNames,{88:'Hair clips, grips and pins',89:'Hair combs, pins and hairstyles',90:'Hair ties and elastics',91:'Headbands',92:'Fascinators, extensions and styling accessories',93:'Barber shops and barbering culture',94:'Hair brushes and combs',95:'Hair colourants and dye',96:'Hair dryers and electrical styling appliances',97:'Shampoo and conditioner',98:'Hair styling products',99:'Hair treatments'});
 const names=['Archive.London','Photography archive','Robert Harper','Fashion','Jewellery','Beauty and cosmetics','Fragrance','Portraits','Musicians and bands','London','Scotland','Places and travel','Designer footwear','Handbags and bags','Watches','Food','Drinks','Interiors and design','Polaroids','Analogue photography','Motor racing','Aviation','Garden and botanical','Marine and superyachts','Kitchen and tableware','Bathroom and bathing','Hair and grooming','Toys and childhood','Sport','Landscapes','Corporate and technology','Weddings','Advertising'];
 const edits=[
+  [/The ratio of frames to finished ideas preserves subtle decisions of angle and placement, particularly important for an object whose effect changes completely when worn\./g,'The frame count records the broader set of exposures. Angle and placement can be explored through the photographs, particularly for an accessory whose effect changes when worn.'],
+  [/The relationship should be understood as a formative professional apprenticeship, not a vague stylistic comparison\./g,'This was a formative professional apprenticeship.'],
+  [/Archive\.London should present the sequence with the respect due to a piece of lived history\./g,'The collection is presented as a record of lived history.'],
+  [/although Archive\.London should not assign any unlabelled brush photograph to a particular client/g,'although this career history does not identify the client for an unlabelled brush photograph'],
+  [/It should not be used to label individual colourant images unless original documentation makes the link, a distinction that enhances Archive\.London’s credibility\./g,'Individual colourant photographs require their own documentation to establish a client connection.'],
+  [/Archive\.London should foreground that provenance\./g,'That career context informs the collection.'],
+  [/Archive\.London should retain the distinction between this career context and any specific product attribution that has not yet been verified from labels or job records\./g,'This career context does not establish a specific product attribution; labels and job records provide the starting point for that research.'],
+  [/This is precisely how Archive\.London can become referencable: by joining verified biography, accurate provenance and intelligent cultural interpretation, rather than treating images as interchangeable stock\./g,'The collection connects Harper’s biography and catalogue records with cultural research into hair, music and identity.'],
+  [/a physical location, a verified count and a biography/g,'a recorded catalogue count and a biography'],
   [/The high ratio of frames to compositions also preserves Harper’s process as he adjusted angle, light and arrangement\./g,'The frame total records the broader set of exposures; the counts alone do not establish how angle, light or arrangement changed.'],
   [/It should not be presented as a miscellaneous floral download\. Archive\.London can use the related frames to show sequence and refinement, inviting viewers to appreciate the choices behind a finished composition\./g,'The related frames offer material for researching sequence and refinement, and the choices behind a finished composition.'],
   [/Those images should be linked rather than added to the dedicated bicycle total\./g,'Those images remain part of the separate sports holdings and are not included in the dedicated bicycle total.'],
@@ -159,10 +173,11 @@ for(const filename of (await fs.readdir('content/source')).sort()){
   pages.at(-1).sourceFile=filename;
   pages.at(-1).catalogueFacts=Object.fromEntries(Object.entries(meta.inventory_evidence||{}).filter(([key,value])=>typeof value==='number'&&!/folder/i.test(key)));
 }
-const garden=pages.find(p=>p.id==='garden-botanical');
-if(garden){
-  for(const child of pages.filter(p=>Number(p.sourceFile.slice(0,2))>=78&&Number(p.sourceFile.slice(0,2))<=87)){
-    if(!garden.related.some(r=>r.path===child.path))garden.related.push({path:child.path,label:child.title});
+for(const group of collectionGroups){
+  const parent=pages.find(p=>p.id===group.id);
+  if(!parent)continue;
+  for(const child of pages.filter(p=>{const n=Number(p.sourceFile.match(/^\d+/)?.[0]);return n>=group.start&&n<=group.end;})){
+    if(!parent.related.some(r=>r.path===child.path))parent.related.push({path:child.path,label:child.title});
   }
 }
 await fs.writeFile('content/pages.json',JSON.stringify(pages,null,2)+'\n');
