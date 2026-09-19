@@ -12,7 +12,8 @@ function normaliseRoute(path){
 }
 Object.assign(routeAliases,{'jewellery-photography':'jewellery','portrait-photography':'portraits','sports-photography':'sport','london-photography':'london','bathroom-and-bathing':'bathroom-bathing','musicians-and-bands':'music'});
 const collectionGroups=[{start:78,end:87,id:'garden-botanical',label:'Garden and botanical'},{start:88,end:99,id:'hair-grooming',label:'Hair and grooming'}];
-collectionGroups.push({start:100,end:119,id:'interiors-design',label:'Interiors and design'});
+collectionGroups.push({start:100,end:129,id:'interiors-design',label:'Interiors and design'});
+Object.assign(routeAliases,{'optics-and-seeing':'optics','clocks-and-timepieces':'clocks','music-objects-and-audio':'music-audio'});
 Object.assign(routeAliases,{'beach-and-pool-life':'beach-pool','drinks-photography':'drinks','crime-and-detection':'crime-detection','candles-and-light':'candles-light','religion-and-occult':'religion-occult','fireworks-and-night-scenes':'fireworks-night'});
 Object.assign(routeAliases,{'toys-and-childhood':'toys-childhood','kitchen-and-tableware':'kitchen-tableware','haberdashery-and-textiles':'haberdashery-textiles','silver-and-decorative-objects':'silver-objects','gifts-and-wrapping':'gifts-wrapping','stationery-and-writing':'stationery-writing','books-and-publishing':'books-publishing','bedrooms-and-sleep':'bedrooms-sleep'});
 function readSource(raw,filename,record=false){
@@ -47,8 +48,17 @@ Object.assign(additionalNames,{78:'Garden ornament, barbecues and outdoor detail
 Object.assign(additionalNames,{88:'Hair clips, grips and pins',89:'Hair combs, pins and hairstyles',90:'Hair ties and elastics',91:'Headbands',92:'Fascinators, extensions and styling accessories',93:'Barber shops and barbering culture',94:'Hair brushes and combs',95:'Hair colourants and dye',96:'Hair dryers and electrical styling appliances',97:'Shampoo and conditioner',98:'Hair styling products',99:'Hair treatments'});
 Object.assign(additionalNames,{100:'Animal ornaments and decorative objects',101:'Baskets and bins',102:'Decorative bowls, dishes and plates',103:'Boxes, storage and trinket boxes',104:'Designer chairs, sofas and chaise longues',105:'Cupboards, screens and magazine racks',106:'Curtains, hangings and interior textiles',107:'Cushions and bolsters',108:'Door handles, letterboxes and house numbers',109:'Doormats and boot scrapers'});
 Object.assign(additionalNames,{110:'Domestic fabrics and interior textiles',111:'Electric fans and domestic cooling',112:'Decorative glassware, bottles and vases',113:'Keys, padlocks, hooks and hangers',114:'Incense and pot pourri',115:'Lamps and domestic lighting I',116:'Lamps and domestic lighting II',117:'Lampshades, fairy lights and light pulls',118:'Lamps and lampshades',119:'Glass, paper and metal lanterns'});
+Object.assign(additionalNames,{120:'Laundry, linen and washing',121:'Light switches and domestic electricity',122:'Mirrors and reflection',123:'Hand warmers, heaters and household curiosities',124:'Ornaments and decorative objects',125:'Picture frames and prints',126:'Rugs and throws',127:'Stools and bar stools',128:'Storage, shelving and magazine racks',129:'Tables and table settings'});
 const names=['Archive.London','Photography archive','Robert Harper','Fashion','Jewellery','Beauty and cosmetics','Fragrance','Portraits','Musicians and bands','London','Scotland','Places and travel','Designer footwear','Handbags and bags','Watches','Food','Drinks','Interiors and design','Polaroids','Analogue photography','Motor racing','Aviation','Garden and botanical','Marine and superyachts','Kitchen and tableware','Bathroom and bathing','Hair and grooming','Toys and childhood','Sport','Landscapes','Corporate and technology','Weddings','Advertising'];
 const edits=[
+  [/a precise group whose depth suggests careful exploration of angle, surface and operation/g,'a focused group whose angles, surfaces and operation can be researched through the individual photographs'],
+  [/Archive\.London should embrace the category’s curiosity while preserving evidential restraint\. Objects may be researched further from the original frames, but no identity, maker or date should be invented for the sake of a more dramatic caption\./g,'The original frames provide a starting point for researching these unusual objects. Individual identities, makers and dates remain subject to that research.'],
+  [/Archive\.London should use this category to reinforce its heritage mission\./g,'The collection connects the archive to the history of photographic display.'],
+  [/On this page they also invite a larger question/g,'They also invite a larger question'],
+  [/before the complete dematerialisation of music and print/g,'as music and print increasingly moved into digital formats'],
+  [/Archive\.London’s presentation should retain visible books, discs and magazines where rights allow, since context transforms storage from an empty product into cultural history\./g,'Books, discs and magazines visible in the photographs can help establish how the storage was used and its wider cultural context.'],
+  [/Its frame depth preserves detailed refinements in placement, light and tabletop arrangement\./g,'The frame total records the broader set of exposures, providing material for research into placement, light and tabletop arrangement.'],
+  [/Archive\.London should present these photographs as heritage scenes rather than catalogue products\./g,'These photographs record the social and design contexts of tables and entertaining.'],
   [/The category should not be inflated into a particular brand commission without evidence\./g,'The category description does not establish a particular brand commission.'],
   [/Archive\.London should present the collection as a meeting of material and expertise\./g,'The collection brings together material and photographic expertise.'],
   [/No individual incense image should be assigned to them without further evidence\./g,'Those career connections do not establish a client for an individual incense photograph.'],
@@ -166,6 +176,11 @@ for(const filename of (await fs.readdir('content/source')).sort()){
   const sourceMetaDescription=meta.meta_description;
   const sourceMetaTitle=meta.meta_title;
   let copy=body.trim();
+  if(filename.startsWith('124_'))copy=copy.replace(/For more than fifteen years he contributed regularly[^\n]+\*\*Montblanc\*\*\./,original=>{
+    const replacement='The ornaments sit within a broader practice spanning magazines and commercial photography. Harper contributed regularly to **Elle** and **The Telegraph Magazine** for more than fifteen years; his other publication credits included **Vogue, Tatler, Cosmopolitan, Esquire, The Face, Wallpaper** and **Harpers & Queen**. His confirmed clients across that career included **De Beers, Boots, Heinz, Diageo, Harrods, Selfridges, the BBC, CBS Records** and **Montblanc**.';
+    changes.push({file:filename,original,replacement,reason:'Retain all supplied career facts in collection-specific wording instead of repeating another page verbatim.'});
+    return replacement;
+  });
   const biographyVariants={
     '113_':'Harper’s photographs of everyday mechanisms sit within a career that began in Scotland. Raised between Glasgow and Islay, he received his first camera at seven and sold a concert photograph of **The Who** at fourteen. Photography studies took him to London, followed by two years at **Condé Nast** directly assisting **David Bailey, Helmut Newton and Lester Bookbinder**.',
     '115_':'The lamp studies draw on Harper’s long photographic training. Born in Scotland and raised between Glasgow and Islay, he received a camera at seven and sold a photograph from a concert by **The Who** at fourteen. He moved to London to study photography, then spent two years at **Condé Nast** directly assisting **David Bailey, Helmut Newton and Lester Bookbinder**.'
