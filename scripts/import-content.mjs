@@ -12,7 +12,8 @@ function normaliseRoute(path){
 }
 Object.assign(routeAliases,{'jewellery-photography':'jewellery','portrait-photography':'portraits','sports-photography':'sport','london-photography':'london','bathroom-and-bathing':'bathroom-bathing','musicians-and-bands':'music'});
 const collectionGroups=[{start:78,end:87,id:'garden-botanical',label:'Garden and botanical'},{start:88,end:99,id:'hair-grooming',label:'Hair and grooming'}];
-collectionGroups.push({start:100,end:109,id:'interiors-design',label:'Interiors and design'});
+collectionGroups.push({start:100,end:119,id:'interiors-design',label:'Interiors and design'});
+Object.assign(routeAliases,{'beach-and-pool-life':'beach-pool','drinks-photography':'drinks','crime-and-detection':'crime-detection','candles-and-light':'candles-light','religion-and-occult':'religion-occult','fireworks-and-night-scenes':'fireworks-night'});
 Object.assign(routeAliases,{'toys-and-childhood':'toys-childhood','kitchen-and-tableware':'kitchen-tableware','haberdashery-and-textiles':'haberdashery-textiles','silver-and-decorative-objects':'silver-objects','gifts-and-wrapping':'gifts-wrapping','stationery-and-writing':'stationery-writing','books-and-publishing':'books-publishing','bedrooms-and-sleep':'bedrooms-sleep'});
 function readSource(raw,filename,record=false){
   raw=raw.replace(/\r\n/g,'\n');
@@ -45,8 +46,16 @@ Object.assign(additionalNames,{69:'Beach and pool life',70:'Bicycles and cycling
 Object.assign(additionalNames,{78:'Garden ornament, barbecues and outdoor details',79:'Flower bouquets and arrangements',80:'Dried, artificial and withered flowers',81:'Flowers and botanical studies',82:'Single flowers and buttonholes',83:'Garden furniture and outdoor living',84:'Leaves and foliage studies',85:'Garden pots and planters',86:'Potted plants and indoor greenery',87:'Garden tools and equipment'});
 Object.assign(additionalNames,{88:'Hair clips, grips and pins',89:'Hair combs, pins and hairstyles',90:'Hair ties and elastics',91:'Headbands',92:'Fascinators, extensions and styling accessories',93:'Barber shops and barbering culture',94:'Hair brushes and combs',95:'Hair colourants and dye',96:'Hair dryers and electrical styling appliances',97:'Shampoo and conditioner',98:'Hair styling products',99:'Hair treatments'});
 Object.assign(additionalNames,{100:'Animal ornaments and decorative objects',101:'Baskets and bins',102:'Decorative bowls, dishes and plates',103:'Boxes, storage and trinket boxes',104:'Designer chairs, sofas and chaise longues',105:'Cupboards, screens and magazine racks',106:'Curtains, hangings and interior textiles',107:'Cushions and bolsters',108:'Door handles, letterboxes and house numbers',109:'Doormats and boot scrapers'});
+Object.assign(additionalNames,{110:'Domestic fabrics and interior textiles',111:'Electric fans and domestic cooling',112:'Decorative glassware, bottles and vases',113:'Keys, padlocks, hooks and hangers',114:'Incense and pot pourri',115:'Lamps and domestic lighting I',116:'Lamps and domestic lighting II',117:'Lampshades, fairy lights and light pulls',118:'Lamps and lampshades',119:'Glass, paper and metal lanterns'});
 const names=['Archive.London','Photography archive','Robert Harper','Fashion','Jewellery','Beauty and cosmetics','Fragrance','Portraits','Musicians and bands','London','Scotland','Places and travel','Designer footwear','Handbags and bags','Watches','Food','Drinks','Interiors and design','Polaroids','Analogue photography','Motor racing','Aviation','Garden and botanical','Marine and superyachts','Kitchen and tableware','Bathroom and bathing','Hair and grooming','Toys and childhood','Sport','Landscapes','Corporate and technology','Weddings','Advertising'];
 const edits=[
+  [/The category should not be inflated into a particular brand commission without evidence\./g,'The category description does not establish a particular brand commission.'],
+  [/Archive\.London should present the collection as a meeting of material and expertise\./g,'The collection brings together material and photographic expertise.'],
+  [/No individual incense image should be assigned to them without further evidence\./g,'Those career connections do not establish a client for an individual incense photograph.'],
+  [/This professional relationship matters particularly on a page about lighting\./g,'This professional relationship is particularly relevant to the lighting photographs.'],
+  [/Archive\.London can position this as a heritage study by a photographer trained among internationally recognised names and published across leading magazines\./g,'This heritage study belongs to the work of a photographer trained among internationally recognised names and published across leading magazines.'],
+  [/The unusually rich frame depth preserves detailed experimentation with angle, glow and proportion\./g,'The frame total records the broader set of exposures; the counts alone do not establish how angle, glow or proportion varied.'],
+  [/Archive\.London can use related frames to show Harper’s working intelligence rather than offering a single decontextualised product shot\./g,'Related frames offer material for researching Harper’s working process alongside the individual product photographs.'],
   [/Archive\.London should make that connection as career context, without attributing an unidentified basket or bin to either retailer\./g,'This career context does not establish a retailer or commission for an unidentified basket or bin.'],
   [/Archive\.London should resist the flatness of catalogue presentation\./g,'The collection presents furniture through Harper’s editorial approach.'],
   [/Archive\.London can therefore position the collection at the meeting point of clothing, interiors and editorial image making, supported by evidence rather than loose analogy\./g,'The collection connects clothing, interiors and editorial image making through Harper’s work with fabric, texture and light.'],
@@ -157,6 +166,17 @@ for(const filename of (await fs.readdir('content/source')).sort()){
   const sourceMetaDescription=meta.meta_description;
   const sourceMetaTitle=meta.meta_title;
   let copy=body.trim();
+  const biographyVariants={
+    '113_':'Harper’s photographs of everyday mechanisms sit within a career that began in Scotland. Raised between Glasgow and Islay, he received his first camera at seven and sold a concert photograph of **The Who** at fourteen. Photography studies took him to London, followed by two years at **Condé Nast** directly assisting **David Bailey, Helmut Newton and Lester Bookbinder**.',
+    '115_':'The lamp studies draw on Harper’s long photographic training. Born in Scotland and raised between Glasgow and Islay, he received a camera at seven and sold a photograph from a concert by **The Who** at fourteen. He moved to London to study photography, then spent two years at **Condé Nast** directly assisting **David Bailey, Helmut Newton and Lester Bookbinder**.'
+  };
+  const variant=Object.entries(biographyVariants).find(([prefix])=>filename.startsWith(prefix));
+  if(variant){
+    copy=copy.replace(/(?:Born in Scotland|Robert Harper was born in Scotland)[^\n]+Lester Bookbinder\*\*\./,original=>{
+      changes.push({file:filename,original,replacement:variant[1],reason:'Replace a verbatim repeated biography paragraph with collection-specific wording while retaining its supplied facts.'});
+      return variant[1];
+    });
+  }
   for(const [pattern,replacement] of edits){copy=copy.replace(pattern,match=>{changes.push({file:filename,original:match,replacement,reason:'Convert production guidance to reader-facing language or qualify an unverified assertion.'});return replacement;});}
   copy=copy.replace(/[\u2013\u2014]/g,',').replace(/\n{3,}/g,'\n\n');
   if(filename.startsWith('15_')) meta.meta_description="Explore Robert Harper's watch photography, including designer timepieces, Swatch, Mackintosh-related designs and TAG Heuer Monaco catalogue material.";
