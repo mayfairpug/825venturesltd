@@ -4,12 +4,43 @@ import {parse} from 'yaml';
 // Import the explicitly supplied batch only. Source notes never enter the public build.
 const changes=[];
 const pages=[];
+const routeAliases={'parties-and-entertaining':'parties-entertaining','food-photography':'food','wedding-photography':'weddings','interiors-and-design':'interiors-design','art-and-artists-materials':'art','fragrance-photography':'fragrance','beauty-cosmetics-photography':'beauty-cosmetics','fashion-photography':'fashion','corporate-technology-photography':'corporate-technology'};
+function normaliseRoute(path){
+  if(!path.startsWith('/archive/'))return path;
+  const slug=path.split('/').filter(Boolean).at(-1);
+  return '/photography-archive/'+(routeAliases[slug]||slug)+'/';
+}
+function readSource(raw,filename,record=false){
+  raw=raw.replace(/\r\n/g,'\n');
+  const frontmatter=raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/);
+  if(frontmatter)return {meta:parse(frontmatter[1]),body:frontmatter[2]};
+  const field=name=>raw.match(new RegExp('^\\*\\*'+name+':\\*\\* (.+)$','m'))?.[1];
+  const h1=raw.match(/^# (.+)$/m)?.[1];
+  const suggested=field('Suggested URL')?.replaceAll('`','');
+  const title=field('Meta title'),description=field('Meta description');
+  const unique=raw.match(/\*\*Unique shots:\*\* (\d+)/)?.[1];
+  const frames=raw.match(/\*\*Total frames and variants:\*\* (\d+)/)?.[1];
+  const relatedSection=raw.match(/## Related Archive\.London collections\n([\s\S]*?)(?=\n## |$)/)?.[1];
+  const schema=raw.match(/## Structured data\s*```json\s*([\s\S]*?)```/)?.[1];
+  if(!h1||!suggested||!title||!description||!unique||!frames||!relatedSection||!schema)throw Error('Incomplete labelled Markdown source: '+filename);
+  const suppliedSchema=JSON.parse(schema);
+  if(suppliedSchema.numberOfItems!==Number(unique))throw Error('Source count mismatch: '+filename);
+  const related=[...relatedSection.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)].map(([,label,url])=>({label,url:normaliseRoute(url)}));
+  related.push({label:'Garden and botanical',url:'/photography-archive/garden-botanical/'});
+  let body=raw.slice(raw.indexOf('\n## ')+1).split('\n## Related Archive.London collections')[0];
+  body=body.replace(/^- \*\*Physical location:\*\*[^\n]*\n/gm,'');
+  if(record)changes.push({file:filename,reason:'Read labelled Markdown metadata; keep image guidance, sample schema and storage locations in private source; render related collections through the site template.',originalSuggestedPath:suggested,publishedPath:normaliseRoute(suggested)});
+  return {meta:{url:'https://archive.london'+normaliseRoute(suggested),h1,meta_title:title,meta_description:description,page_type:'subject_collection',related_pages:related,inventory_evidence:{unique_images:Number(unique),total_frames:Number(frames)},suppliedSchema},body};
+}
 const additionalNames={34:'Cats',35:'Candles and light',36:'Eyewear',37:'Stationery and writing',38:'Music objects and audio',39:'Books and publishing',41:'Art and artists’ materials',42:'Christmas',43:'Telephones and communication',44:'Transport',45:'Water and underwater',46:'Travel goods and accessories',47:'Silver and decorative objects',48:'Smoking and tobacco culture',49:'Parties and entertaining',50:'Bedrooms and sleep',51:'Pet accessories'};
 Object.assign(additionalNames,{52:'Gifts and wrapping',53:'Haberdashery and textiles',54:'Medical objects',55:'Money and credit',56:'Office life',57:'Optics and seeing',58:'Religion and ritual',59:'Shells, pebbles and fossils',60:'Umbrellas, canes and fans'});
 Object.assign(additionalNames,{61:'Antiques and historic objects',62:'Cameras and film',63:'Film memorabilia and stars',64:'Newspapers and press',65:'Television, video and DVD',66:'Clocks and timepieces',67:'Awards and trophies',68:'Badges, pins and insignia'});
 Object.assign(additionalNames,{69:'Beach and pool life',70:'Bicycles and cycling',71:'Camping and outdoor life',72:'Crime and detection',73:'DIY, tools and construction',74:'Easter',75:'Fire, flames and fireplaces',76:'Fireworks and night scenes',77:'Gambling and games of chance'});
+Object.assign(additionalNames,{78:'Garden ornament, barbecues and outdoor details',79:'Flower bouquets and arrangements',80:'Dried, artificial and withered flowers',81:'Flowers and botanical studies',82:'Single flowers and buttonholes',83:'Garden furniture and outdoor living',84:'Leaves and foliage studies',85:'Garden pots and planters',86:'Potted plants and indoor greenery',87:'Garden tools and equipment'});
 const names=['Archive.London','Photography archive','Robert Harper','Fashion','Jewellery','Beauty and cosmetics','Fragrance','Portraits','Musicians and bands','London','Scotland','Places and travel','Designer footwear','Handbags and bags','Watches','Food','Drinks','Interiors and design','Polaroids','Analogue photography','Motor racing','Aviation','Garden and botanical','Marine and superyachts','Kitchen and tableware','Bathroom and bathing','Hair and grooming','Toys and childhood','Sport','Landscapes','Corporate and technology','Weddings','Advertising'];
 const edits=[
+  [/The high ratio of frames to compositions also preserves Harper’s process as he adjusted angle, light and arrangement\./g,'The frame total records the broader set of exposures; the counts alone do not establish how angle, light or arrangement changed.'],
+  [/It should not be presented as a miscellaneous floral download\. Archive\.London can use the related frames to show sequence and refinement, inviting viewers to appreciate the choices behind a finished composition\./g,'The related frames offer material for researching sequence and refinement, and the choices behind a finished composition.'],
   [/Those images should be linked rather than added to the dedicated bicycle total\./g,'Those images remain part of the separate sports holdings and are not included in the dedicated bicycle total.'],
   [/The inventory describes camping goods broadly, so detailed product types should be identified from the images before individual subpages are created\./g,'The inventory describes camping goods broadly; individual product types can be researched through the photographs.'],
   [/It is a small category, and its precise subjects must be established by image review before the public page offers more detailed claims\./g,'It is a small category whose precise subjects remain questions for image-level research.'],
@@ -98,8 +129,7 @@ const edits=[
 ];
 for(const filename of (await fs.readdir('content/source')).sort()){
   const raw=await fs.readFile('content/source/'+filename,'utf8');
-  const [,front,body]=raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/);
-  const meta=parse(front);
+  const {meta,body}=readSource(raw,filename,true);
   const sourceMetaDescription=meta.meta_description;
   const sourceMetaTitle=meta.meta_title;
   let copy=body.trim();
@@ -129,11 +159,17 @@ for(const filename of (await fs.readdir('content/source')).sort()){
   pages.at(-1).sourceFile=filename;
   pages.at(-1).catalogueFacts=Object.fromEntries(Object.entries(meta.inventory_evidence||{}).filter(([key,value])=>typeof value==='number'&&!/folder/i.test(key)));
 }
+const garden=pages.find(p=>p.id==='garden-botanical');
+if(garden){
+  for(const child of pages.filter(p=>Number(p.sourceFile.slice(0,2))>=78&&Number(p.sourceFile.slice(0,2))<=87)){
+    if(!garden.related.some(r=>r.path===child.path))garden.related.push({path:child.path,label:child.title});
+  }
+}
 await fs.writeFile('content/pages.json',JSON.stringify(pages,null,2)+'\n');
 const privateRegister=[];
 for(const filename of (await fs.readdir('content/source')).sort()){
   const raw=await fs.readFile('content/source/'+filename,'utf8');
-  privateRegister.push({sourceFile:filename,...parse(raw.match(/^---\s*\n([\s\S]*?)\n---/)[1]),inventorySourceRows:[],evidenceStatus:'Supplied editorial assertions; source inventory reconciliation pending'});
+  privateRegister.push({sourceFile:filename,...readSource(raw,filename).meta,inventorySourceRows:[],evidenceStatus:'Supplied editorial assertions; source inventory reconciliation pending'});
 }
 await fs.writeFile('content/page-register.private.json',JSON.stringify(privateRegister,null,2));
 await fs.mkdir('reports',{recursive:true});

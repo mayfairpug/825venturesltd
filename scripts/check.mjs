@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {load} from 'cheerio';
+import {marked} from 'marked';
 const root=path.resolve('dist');
 const register=JSON.parse(await fs.readFile(root+'/assets/page-register.json','utf8'));
 const sources=JSON.parse(await fs.readFile('content/pages.json','utf8'));
@@ -64,7 +65,7 @@ for(const source of sources){
  const visible=normalise(documents.get(source.path)('main').text());
  for(const block of source.body.split(/\n\s*\n/)){
   if(!block||/^[#<\[-]/.test(block)||/^\*\*Archive/.test(block))continue;
-  const text=normalise(block.replace(/\*\*/g,''));
+  const text=normalise(load(marked.parse(block)).text());
   if(text.length>100)check(visible.includes(text),`${source.path}: substantive source paragraph omitted: ${text.slice(0,80)}`);
  }
 }
