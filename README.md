@@ -81,3 +81,5 @@ Batch 31 adds six footwear collections, field sport, silver, smoking objects and
 Batch 32 adds five sporting collections and five stationery collections. Current coverage is 298 supplied pages, 301 routes and 295 collections. The latest mobile layout allows long headings to wrap within shrinking grid tracks. The editorial similarity report identifies six pairs for human review, with no repeated long paragraphs.
 
 Batch 33 adds historic London streets, communication devices, torches and seven toy/game collections. Current coverage: 308 supplied files, 311 routes and 305 collections. Catalogue dates and spellings are retained without extending unverified identifications.
+
+Batch 34 adds four toy collections, transport, travel objects, television equipment, umbrellas, love tokens and designer watches. Coverage is now 318 supplied files, 321 routes and 315 collections. Object associations remain catalogue leads; the watch count’s source asterisk is retained in the provenance copy.
