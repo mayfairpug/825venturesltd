@@ -97,6 +97,7 @@ const ctaRoutes=[
 ];
 const knownBrands=['Chanel','Christian Dior','Prada','Gucci','Louis Vuitton','Burberry','Mulberry','Fendi','Givenchy','Valentino','Versace','Calvin Klein','Yves Saint Laurent','Jean Paul Gaultier','Jo Malone','Guerlain','Issey Miyake','Donna Karan','Nina Ricci','Rochas','Tommy Hilfiger','Paul Smith','Manolo Blahnik','Jimmy Choo','Christian Louboutin','Sergio Rossi','Kurt Geiger','Vivienne Westwood','Karen Millen','Emma Hope','Patrick Cox','Lulu Guinness','Anya Hindmarch','Paco Rabanne','Emilio Pucci','Moschino','Jasper Conran','Marc Jacobs','Chloé','Swatch','TAG Heuer','De Beers','Cinzano'];
 const knownPeople=['David Bowie','David Gray','Eric Clapton','Paul McCartney','Van Morrison','Santana','Jethro Tull','Everything But The Girl','Laurie Anderson','Art Blakey','The Zombies','Colin Blunstone','Robert De Niro','Sir Bobby Charlton','Sir Hardy Amies','Ken Russell','Paul Whitehouse','Anthony Powell','Zerbanoo Gifford','Candida Crewe','Anton Lesser','Fali Pavri','The Who'];
+knownPeople.push('Charlie Chaplin','Terence Bayler','Michael Palin','Steve McQueen','Marianna Asprey');
 const knownPlaces=['London','Scotland','Glasgow','Islay','New Bond Street','Chelsea Arts Club','Royal Albert Hall','London Bridge','Jamaica','Paris','Rome','Villa Lante','Tuscany','Lucca','New York','Venice','Iceland',"Côte d'Azur"];
 const mentions=(p,list)=>list.filter(x=>p.body.toLowerCase().includes(x.toLowerCase()));
 for(const p of pages){
