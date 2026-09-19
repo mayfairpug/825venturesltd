@@ -1,0 +1,5 @@
+node_modules/
+dist/
+reports/
+content/source/
+content/page-register.private.json
