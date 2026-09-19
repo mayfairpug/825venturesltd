@@ -79,3 +79,5 @@ The fixed ivory navigation, reserved scrolling area, typography, green accents, 
 
 Batch 31 adds six footwear collections, field sport, silver, smoking objects and ball games. Current coverage is 288 supplied pages, 291 routes and 285 collections. Catalogue associations remain distinct from confirmed object ownership.
 Batch 32 adds five sporting collections and five stationery collections. Current coverage is 298 supplied pages, 301 routes and 295 collections. The latest mobile layout allows long headings to wrap within shrinking grid tracks. The editorial similarity report identifies six pairs for human review, with no repeated long paragraphs.
+
+Batch 33 adds historic London streets, communication devices, torches and seven toy/game collections. Current coverage: 308 supplied files, 311 routes and 305 collections. Catalogue dates and spellings are retained without extending unverified identifications.

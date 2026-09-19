@@ -4,8 +4,8 @@
     "lastmod": "2026-09-19T21:14:07.691Z"
   },
   "/photography-archive/": {
-    "hash": "b8f648ae657f025a82544c80d03a2d3fa2c725392317158c730d389a7f81ff64",
-    "lastmod": "2026-09-19T21:14:07.694Z"
+    "hash": "b3bd4a1e9ab213a36b59d0f9f7d0d8d3fefa3b2ede6bd458f4edff58368dfae0",
+    "lastmod": "2026-09-19T21:26:55.624Z"
   },
   "/robert-harper-photographer/": {
     "hash": "472da57fefddcae01b707942568077b81b3aec1f0466e7c8aed993b6f53b90fe",
@@ -76,8 +76,8 @@
     "lastmod": "2026-09-19T21:05:26.535Z"
   },
   "/photography-archive/london/": {
-    "hash": "a6312cf31e6b7f4448ce9f6b4590a6bad24d6324e33592b30988484bbb7df0cb",
-    "lastmod": "2026-09-19T21:05:26.536Z"
+    "hash": "94f5eda8cbbac90eaa2265c7cc9e74e9eafd42e65c080d99bad112b99a4925e7",
+    "lastmod": "2026-09-19T21:26:55.645Z"
   },
   "/photography-archive/domestic-fabrics-interior-textiles/": {
     "hash": "b921ea0ce23de57f8007d0d563b4f67c0d78c8d2bb03179884dd0f49aa3e573d",
@@ -828,8 +828,8 @@
     "lastmod": "2026-09-19T21:05:26.723Z"
   },
   "/photography-archive/toys-childhood/": {
-    "hash": "67d306fbf561a1018d2490d8a27981a19de3826dd1046e4929930978e06b3125",
-    "lastmod": "2026-09-19T21:05:26.724Z"
+    "hash": "787b0c3731fc5d91e1a1174cac7b46141600b8c3aabf873c832dfc843588f186",
+    "lastmod": "2026-09-19T21:26:55.821Z"
   },
   "/photography-archive/slippers-domestic-footwear/": {
     "hash": "202adc18966083bfbd6e422f956783914b518eb3c6529d48c52c26274a2330bb",
@@ -919,6 +919,46 @@
     "hash": "46cd89781e2b3a645133ed6d29c20820a9849ea30d5077d56942da63076176ed",
     "lastmod": "2026-09-19T21:05:26.726Z"
   },
+  "/photography-archive/chelsea-arts-club-new-bond-street-scenes/": {
+    "hash": "57c30c7a68e1d679ec672d9f7f45d7849c9e1b7a6ee3a73447a5438240d43018",
+    "lastmod": "2026-09-19T21:26:55.840Z"
+  },
+  "/photography-archive/telephones-mobiles-pagers-fax-machines/": {
+    "hash": "e7a2207ee4b3d990cdcb48f5c343f025581b9bce37db8d9529362587638e8695",
+    "lastmod": "2026-09-19T21:26:55.841Z"
+  },
+  "/photography-archive/torches-portable-light/": {
+    "hash": "50fb72d02228ee9ff20d500dd481110a1752757318cd664f4fa97dd5b6fcc97e",
+    "lastmod": "2026-09-19T21:26:55.842Z"
+  },
+  "/photography-archive/toy-cars-horse-drawn-carriages/": {
+    "hash": "9a445aef51873fb8862bcef164458f7090d104bded2d4e9d2ff1f284b846bbcf",
+    "lastmod": "2026-09-19T21:26:55.842Z"
+  },
+  "/photography-archive/dolls-barbie-action-man-matryoshka/": {
+    "hash": "823e17113ac7f9c362283608007ff7b9fdc7a73c9fbd378b362e333487e33dd1",
+    "lastmod": "2026-09-19T21:26:55.843Z"
+  },
+  "/photography-archive/chess-playing-cards-classic-games/": {
+    "hash": "9335305671caa43b862fd0a49bcf456d9f2b904a84a15dc52e9129012d2c125c",
+    "lastmod": "2026-09-19T21:26:55.844Z"
+  },
+  "/photography-archive/general-toys-culture-of-play/": {
+    "hash": "9e28e4e7eb98fd67f4431edc1bd1f93d725c7aa78973b40eaf516051aebca541",
+    "lastmod": "2026-09-19T21:26:55.845Z"
+  },
+  "/photography-archive/jigsaws-wooden-puzzles/": {
+    "hash": "26d125c4d26ac7cffbc50984ae6de82d8591cb19f8a90e28ee0975e811252f4a",
+    "lastmod": "2026-09-19T21:26:55.846Z"
+  },
+  "/photography-archive/model-boats-planes-construction-sets/": {
+    "hash": "4c84a64cd268b0bff4e32fb968e3aa204b1ce688418c3eae07e1beac27086928",
+    "lastmod": "2026-09-19T21:26:55.847Z"
+  },
+  "/photography-archive/board-games-card-games/": {
+    "hash": "69c14ba701b41e9201f45ecadbd91c7c2f9413152d31f26609328eac710cdee5",
+    "lastmod": "2026-09-19T21:26:55.848Z"
+  },
   "/photography-archive/corporate-technology/": {
     "hash": "7b29385985be5f2cbcd4ea96048ce1eb88d1482a6d55899a56ebb3842fd1ad19",
     "lastmod": "2026-09-19T21:05:26.727Z"
@@ -936,8 +976,8 @@
     "lastmod": "2026-09-19T21:05:26.729Z"
   },
   "/photography-archive/candles-light/": {
-    "hash": "b4a5f92893a875a7113555581f93186e5b41ff792f1cd1f78747ce135b23d035",
-    "lastmod": "2026-09-19T21:05:26.730Z"
+    "hash": "5f458b71558bf4b7636f5a6bea658802bd0b6af0ff98ac5cdd3abecc737831ee",
+    "lastmod": "2026-09-19T21:26:55.853Z"
   },
   "/photography-archive/eyewear/": {
     "hash": "bc47f5c78e458335e249dbdef85f4767243ca90bf7d2c1a6a78e7d4ac18600b6",
@@ -964,8 +1004,8 @@
     "lastmod": "2026-09-19T21:05:26.736Z"
   },
   "/photography-archive/telephones-communication/": {
-    "hash": "3a02d3ca44175f3985e5f62609a70c1ec1bb29aba7c1804e069907ae759c5866",
-    "lastmod": "2026-09-19T21:05:26.736Z"
+    "hash": "13ae26a9b3a23e1457f1cf6d5a11d52f6b7653518d565c868429ad1916f6e472",
+    "lastmod": "2026-09-19T21:26:55.860Z"
   },
   "/photography-archive/transport/": {
     "hash": "9f9a18508e81a756dec88e99b9d6f104574e19098fa4b0c838b1f6cbd95de277",

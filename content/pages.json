@@ -1023,6 +1023,10 @@
       },
       {
         "path": "/photography-archive/fashion/"
+      },
+      {
+        "path": "/photography-archive/chelsea-arts-club-new-bond-street-scenes/",
+        "label": "Chelsea Arts Club and historic London streets"
       }
     ],
     "body": "# Page copy\n\n## London photography\n\n# London, studio city and street theatre\n\nLondon was not simply where Robert Harper worked. It was the machinery around the work: studios and magazines, department stores and restaurants, performers, designers, crowded bridges and streets capable of changing character from one decade to the next.\n\nHarper arrived from Scotland to study photography and entered the professional life of the capital through an apprenticeship and two years at the Condé Nast studios. He assisted David Bailey, Helmut Newton and Lester Bookbinder before establishing his own studio and a career rooted in London's editorial and commercial culture.\n\n## The city at work\n\nThe archive's London material does not form one continuous documentary survey. It appears through distinct assignments, locations and observations.\n\nThe street holdings include New Bond Street in 1976, Chelsea Arts Club during the 1970s and scenes connected with a London fire in the 1960s. Corporate material records the rush hour on London Bridge, workplace activity, construction and communications technology. Other photographs move indoors, into shops, restaurants, studios, workshops and carefully designed commercial interiors.\n\nTogether they create a layered portrait. This is London as a place of movement and display, where fashion, finance, culture and ordinary working life occupy neighbouring frames.\n\n## New Bond Street, 1976\n\nNew Bond Street carried a particular concentration of luxury, retail tradition and social performance. Harper's 1976 photographs belong to a period before the contemporary street was remade by global flagship stores and digitally controlled branding.\n\nThe value of such images lies in detail: façades, signs, vehicles, dress, pace and the unplanned relationship between people and place. An ordinary street view can become historically precise simply because the city has continued to change.\n\n## The editorial capital\n\nLondon also appears indirectly through Harper's magazine work. His regular contributions to Elle and The Telegraph Magazine continued for more than fifteen years. His wider work was associated with publications including Vogue, Tatler, Cosmopolitan, Esquire, The Face, Wallpaper and Harpers & Queen.\n\nDepartment stores and retailers such as Harrods and Selfridges formed part of his commercial world. Fashion, beauty, jewellery, portraiture and still life were made within the network of editors, stylists, art directors, studios and suppliers centred on the city.\n\nArchive.London treats these studio images as part of London's visual history, even where the city itself is not visible in the finished frame.\n\n## A London archive in London\n\nThe Robert Harper Photograph Library is now presented through Archive.London. Its relationship to the city is therefore both historical and current: London shaped the photographer's career, and London remains the point from which the collection is being preserved, interpreted and made available for serious use.\n\nStreet and location material can be researched by place, subject and period. Professional enquiries are welcomed for publishing, exhibitions, documentary production, local history, design research and rights-managed licensing.\n\n[Explore New Bond Street in 1976]\n\n[Explore Chelsea Arts Club in the 1970s]\n\n[Explore British fashion photography]\n\n[Enquire about London photographs]",
@@ -10794,6 +10798,34 @@
       {
         "path": "/photography-archive/interiors-design/",
         "label": "Household and material culture"
+      },
+      {
+        "path": "/photography-archive/toy-cars-horse-drawn-carriages/",
+        "label": "Toy Cars and Horse-Drawn Carriages"
+      },
+      {
+        "path": "/photography-archive/dolls-barbie-action-man-matryoshka/",
+        "label": "Dolls, Barbie, Action Man and Matryoshka"
+      },
+      {
+        "path": "/photography-archive/chess-playing-cards-classic-games/",
+        "label": "Chess, Playing Cards and Classic Games"
+      },
+      {
+        "path": "/photography-archive/general-toys-culture-of-play/",
+        "label": "General Toys and the Culture of Play"
+      },
+      {
+        "path": "/photography-archive/jigsaws-wooden-puzzles/",
+        "label": "Jigsaws and Wooden Puzzles"
+      },
+      {
+        "path": "/photography-archive/model-boats-planes-construction-sets/",
+        "label": "Model Boats, Planes and Construction Sets"
+      },
+      {
+        "path": "/photography-archive/board-games-card-games/",
+        "label": "Board Games and Card Games"
       }
     ],
     "body": "# Page copy\n\n## Toys and childhood photography\n\n# Toys, a small world with serious imagination\n\nA toy is rarely content to remain an object. Give it a name, a voice or a place at the table and it enters society immediately.\n\nThe Robert Harper archive contains **953 unique toy photographs across 2,738 frames**, arranged through eleven inventory folders. Dolls, Barbie, Action Man, model cars, games, chess sets, cards, jigsaws, puppets, boats, planes, soft animals, wooden toys, Lego and toy boxes populate an affectionate and visually varied collection.\n\n## Design at play\n\nHarper's still-life eye was ideally suited to toys. Colour, miniature scale and graphic shape give them natural presence, while signs of handling reveal the lives they have led.\n\nSome subjects are carefully arranged as products. Others seem ready to escape the composition. Puppets carry performance within their construction. Dolls arrive with fashion and social expectations. Model cars and planes reduce adult engineering to something that can be held in a child's hand.\n\nThe inventory includes branded and culturally recognisable subjects such as Barbie, Action Man, Lego, Tintin chess and Alice in Wonderland. The named products are photographic subjects; their inclusion does not imply endorsement.\n\n## A history of childhood\n\nToys record changing ideas about play, gender, education and family life. Board games gather people around a table. Soft toys provide companionship. Wooden puzzles promise learning through touch. Electronic entertainment begins to alter the landscape represented elsewhere in the archive.\n\nHarper's work for magazines, retailers and consumer brands gave him an understanding of how objects could appeal to both children and the adults choosing for them. The resulting photographs are polished, but they retain humour and warmth.\n\n### Related collections\n\n- [Children and everyday life](/photography-archive/children/)\n- [Books and publishing](/photography-archive/books-publishing/)\n- [Christmas](/photography-archive/christmas/)\n- [Household and material culture](/photography-archive/interiors-design/)\n\n[Enquire about toy photography]",
@@ -11928,6 +11960,538 @@
     }
   },
   {
+    "id": "chelsea-arts-club-new-bond-street-scenes",
+    "path": "/photography-archive/chelsea-arts-club-new-bond-street-scenes/",
+    "title": "Chelsea Arts Club and historic London streets",
+    "pageType": "subject_collection",
+    "h1": "Chelsea Arts Club, New Bond Street and Historic Street Scenes",
+    "metaTitle": "Historic London Street Photography | Archive.London",
+    "metaDescription": "Explore 101 Robert Harper street photographs including Chelsea Arts Club in the 1970s, New Bond Street in 1976 and a 1960s fire.",
+    "ogTitle": "Historic London Street Photography | Archive.London",
+    "ogDescription": "Explore 101 Robert Harper street photographs including Chelsea Arts Club in the 1970s, New Bond Street in 1976 and a 1960s fire.",
+    "related": [
+      {
+        "path": "/photography-archive/london/",
+        "label": "London Photography"
+      },
+      {
+        "path": "/photography-archive/fashion-restaurant-commercial-locations/",
+        "label": "Fashion, Restaurant and Commercial Locations"
+      },
+      {
+        "path": "/photography-archive/fire-flames-fireplaces/",
+        "label": "Fire, Flames and Fireplaces"
+      },
+      {
+        "path": "/photography-archive/newspaper-front-pages-print-culture/",
+        "label": "Newspaper Front Pages and Print Culture"
+      },
+      {
+        "path": "/photography-archive/transport/",
+        "label": "Transport"
+      }
+    ],
+    "body": "## London before it became history\n\nThe most valuable street photographs often begin as observations of ordinary time. Cars, shop fronts, clothes, signs and passing figures become historical evidence only later. Robert Harper’s street collection contains **101 unique shots and 101 total frames**.\n\nThe inventory specifically records **Chelsea Arts Club in the 1970s**, **New Bond Street in 1976** and a **1960s fire**. These are powerful catalogue anchors, though exact dates, addresses and event details require confirmation from the original frames and notes.\n\n## Robert Harper’s London education\n\nFor the photographer of chelsea arts club and historic london streets, London followed a Scottish childhood in Glasgow and Islay. Harper received a camera at seven and made his first sale at fourteen with a photograph of **The Who** in concert. Photography studies led to two years at **Condé Nast**, directly assisting **David Bailey, Helmut Newton and Lester Bookbinder**.\n\nThe city became both workplace and subject. Harper later established his own studio and built an approximately thirty five year career.\n\nThe chelsea arts club and historic london streets collection connects Harper’s studio practice with his wider editorial career. He worked regularly for **Elle** and **The Telegraph Magazine** for more than fifteen years. Other editorial credits included **Vogue, Tatler, Cosmopolitan, Esquire, The Face, Wallpaper** and **Harpers & Queen**. Across his broader career, confirmed clients included **De Beers, Boots, Heinz, Diageo, Harrods, Selfridges, the BBC, CBS Records** and **Montblanc**.\n\nThis direct involvement with London’s publishing, fashion and cultural life gives the street scenes a perspective from within the city’s creative world.\n\n## Art, luxury and emergency in one urban archive\n\nChelsea Arts Club, New Bond Street and a fire describe very different Londons: bohemian society, luxury commerce and public emergency. Together they make the collection more than architectural record.\n\nPeriod signage, vehicles and street furniture provide context for location research. Individual people and fire details remain subjects for documentary identification.\n\n## Archive provenance\n\n- **Original category:** Street Scenes\n- **Unique shots:** 101\n- **Total frames:** 101\n- **Recorded subjects:** Chelsea Arts Club, New Bond Street and a 1960s fire\n- **Photographer:** Robert Harper",
+    "sourceFile": "310_chelsea_arts_club_new_bond_street_street_scenes.md",
+    "semanticAbout": [
+      {
+        "@type": "Place",
+        "name": "Chelsea Arts Club"
+      },
+      {
+        "@type": "Place",
+        "name": "New Bond Street"
+      },
+      {
+        "@type": "Thing",
+        "name": "London street history"
+      }
+    ],
+    "catalogueFacts": {
+      "unique_images": 101,
+      "total_frames": 101
+    }
+  },
+  {
+    "id": "telephones-mobiles-pagers-fax-machines",
+    "path": "/photography-archive/telephones-mobiles-pagers-fax-machines/",
+    "title": "Telephones, Mobiles, Pagers and Fax Machines",
+    "pageType": "subject_collection",
+    "h1": "Telephones, Mobiles, Pagers and Fax Machines",
+    "metaTitle": "Telephones, Pagers and Fax Machines Archive | Archive.London",
+    "metaDescription": "Discover 130 Robert Harper communication-device studies across 305 frames, from telephones and pagers to mobiles and fax machines.",
+    "ogTitle": "Telephones, Pagers and Fax Machines Archive | Archive.London",
+    "ogDescription": "Discover 130 Robert Harper communication-device studies across 305 frames, from telephones and pagers to mobiles and fax machines.",
+    "related": [
+      {
+        "path": "/photography-archive/telephones-communication/",
+        "label": "Telephones and Communication"
+      },
+      {
+        "path": "/photography-archive/office-equipment-stationery-typewriters/",
+        "label": "Office Equipment, Stationery and Typewriters"
+      },
+      {
+        "path": "/photography-archive/television-video/",
+        "label": "Television, Video and DVD"
+      },
+      {
+        "path": "/photography-archive/general-stationery-early-office-products/",
+        "label": "General Stationery and Early Office Products"
+      },
+      {
+        "path": "/photography-archive/mechanical-equipment/",
+        "label": "Mechanical Equipment"
+      }
+    ],
+    "body": "## A history of waiting to be connected\n\nCommunication once depended on objects with distinct sounds, cords, buttons and rituals. The telephone occupied a fixed place, the pager delivered urgency in miniature, the fax made paper travel and the mobile began to untether conversation from the room.\n\nRobert Harper’s inventory records **130 unique shots across 305 total frames** of telephones, mobile phones, pagers and fax machines.\n\n## Robert Harper’s view of technological change\n\nThe training behind telephones, mobiles, pagers and fax machines included two years at **Condé Nast**, where Harper directly assisted **David Bailey, Helmut Newton and Lester Bookbinder** after studying photography in London. Born in Scotland and raised between Glasgow and Islay, he had received a camera at seven and sold a concert photograph of **The Who** at fourteen.\n\nThe apprenticeship taught him how product design could be made legible and desirable. Harper later founded his own studio and built an approximately thirty five year career spanning major changes in communications technology.\n\nThe telephones, mobiles, pagers and fax machines collection connects Harper’s studio practice with his wider editorial career. He worked regularly for **Elle** and **The Telegraph Magazine** for more than fifteen years. Other editorial credits included **Vogue, Tatler, Cosmopolitan, Esquire, The Face, Wallpaper** and **Harpers & Queen**. Across his broader career, confirmed clients included **De Beers, Boots, Heinz, Diageo, Harrods, Selfridges, the BBC, CBS Records** and **Montblanc**.\n\nHis career crossed the analogue and digital eras, giving this object archive genuine historical breadth.\n\n## Communication before convergence\n\nToday one device performs many of these functions. The archive records a time when voice, text, paper transmission and alerts required different machines.\n\nArchive.London will identify manufacturers and models from labels and records. Historical devices should be presented as design and social history, not as functional current technology.\n\n## Archive provenance\n\n- **Original category:** Telephones\n- **Unique shots:** 130\n- **Total frames:** 305\n- **Recorded subjects:** telephones, mobiles, pagers and fax machines\n- **Photographer:** Robert Harper",
+    "sourceFile": "311_telephones_mobiles_pagers_fax_machines.md",
+    "semanticAbout": [
+      {
+        "@type": "Thing",
+        "name": "Telephones"
+      },
+      {
+        "@type": "Thing",
+        "name": "Pagers"
+      },
+      {
+        "@type": "Thing",
+        "name": "Fax machines"
+      }
+    ],
+    "catalogueFacts": {
+      "unique_images": 130,
+      "total_frames": 305
+    }
+  },
+  {
+    "id": "torches-portable-light",
+    "path": "/photography-archive/torches-portable-light/",
+    "title": "Torches and Portable Light",
+    "pageType": "subject_collection",
+    "h1": "Torches and Portable Light",
+    "metaTitle": "Torches and Portable Light Photography | Archive.London",
+    "metaDescription": "Explore 57 Robert Harper torch studies across 162 frames, documenting portable lighting and functional design.",
+    "ogTitle": "Torches and Portable Light Photography | Archive.London",
+    "ogDescription": "Explore 57 Robert Harper torch studies across 162 frames, documenting portable lighting and functional design.",
+    "related": [
+      {
+        "path": "/photography-archive/lamps-domestic-lighting-collection-one/",
+        "label": "Lamps and Domestic Lighting One"
+      },
+      {
+        "path": "/photography-archive/candles-light/",
+        "label": "Candles and Light"
+      },
+      {
+        "path": "/photography-archive/camping-outdoor-life/",
+        "label": "Camping and Outdoor Life"
+      },
+      {
+        "path": "/photography-archive/mechanical-equipment/",
+        "label": "Mechanical Equipment"
+      },
+      {
+        "path": "/photography-archive/fire-flames-fireplaces/",
+        "label": "Fire, Flames and Fireplaces"
+      }
+    ],
+    "body": "## A private beam against darkness\n\nThe torch is a compact promise of visibility. It belongs to emergencies, camping, night travel, cupboards, workshops and the familiar search for something lost. Its design is shaped by grip, battery, lens and the direction of light.\n\nRobert Harper’s inventory records **57 unique shots across 162 total frames** of torches.\n\n## Robert Harper and the photographed light source\n\nBehind the torches and portable light studies is Harper’s Scottish upbringing between Glasgow and Islay. His first camera arrived at seven; at fourteen he sold a concert photograph of **The Who**. London photography studies preceded two years at **Condé Nast**, directly assisting **David Bailey, Helmut Newton and Lester Bookbinder**.\n\nThe apprenticeship gave him an exact understanding of controlled light, reflective material and product form. Harper later established his own studio and built an approximately thirty five year career.\n\nThe torches and portable light collection connects Harper’s studio practice with his wider editorial career. He worked regularly for **Elle** and **The Telegraph Magazine** for more than fifteen years. Other editorial credits included **Vogue, Tatler, Cosmopolitan, Esquire, The Face, Wallpaper** and **Harpers & Queen**. Across his broader career, confirmed clients included **De Beers, Boots, Heinz, Diageo, Harrods, Selfridges, the BBC, CBS Records** and **Montblanc**.\n\nPhotographing an object that itself produces light creates a particularly fitting meeting of technical and editorial skill.\n\n## Battery culture and functional form\n\nTorches can chart changes in batteries, bulbs, materials and ergonomic design. Exact manufacturers, dates and technologies should be verified from labels and object detail.\n\nArchive.London presents the collection as industrial and domestic history. Historical torches should not be represented as dependable emergency equipment today.\n\n## Archive provenance\n\n- **Original category:** Torches\n- **Unique shots:** 57\n- **Total frames:** 162\n- **Recorded subject:** torches\n- **Photographer:** Robert Harper",
+    "sourceFile": "312_torches_and_portable_light.md",
+    "semanticAbout": {
+      "@type": "Thing",
+      "name": "Torches and portable lighting"
+    },
+    "catalogueFacts": {
+      "unique_images": 57,
+      "total_frames": 162
+    }
+  },
+  {
+    "id": "toy-cars-horse-drawn-carriages",
+    "path": "/photography-archive/toy-cars-horse-drawn-carriages/",
+    "title": "Toy Cars and Horse-Drawn Carriages",
+    "pageType": "subject_collection",
+    "h1": "Toy Cars and Horse-Drawn Carriages",
+    "metaTitle": "Toy Cars and Carriage Photography Archive | Archive.London",
+    "metaDescription": "Discover 67 Robert Harper toy-vehicle studies across 238 frames, including cars and a horse-drawn carriage.",
+    "ogTitle": "Toy Cars and Carriage Photography Archive | Archive.London",
+    "ogDescription": "Discover 67 Robert Harper toy-vehicle studies across 238 frames, including cars and a horse-drawn carriage.",
+    "related": [
+      {
+        "path": "/photography-archive/transport/",
+        "label": "Transport"
+      },
+      {
+        "path": "/photography-archive/model-boats-planes-construction-sets/",
+        "label": "Model Boats, Planes and Construction Sets"
+      },
+      {
+        "path": "/photography-archive/general-toys-culture-of-play/",
+        "label": "General Toys and the Culture of Play"
+      },
+      {
+        "path": "/photography-archive/children-everyday-life/",
+        "label": "Children and Everyday Life"
+      },
+      {
+        "path": "/photography-archive/motor-racing/",
+        "label": "Motor Racing"
+      },
+      {
+        "path": "/photography-archive/toys-childhood/",
+        "label": "Toys and childhood"
+      }
+    ],
+    "body": "## The whole road reduced to the playroom\n\nToy vehicles give children control over movement, speed and imagined journeys. A miniature car can reproduce adult engineering in bright, simplified form, while a horse-drawn carriage introduces an older history of transport into play.\n\nRobert Harper’s inventory records **67 unique shots across 238 total frames** of toy cars and a horse with carriage.\n\n## Robert Harper’s eye for miniature design\n\nThe toy cars and horse-drawn carriages photographs draw on an education that began with a camera at seven. Scottish-born Harper grew up between Glasgow and Islay and sold a **The Who** concert photograph aged fourteen. He studied photography in London before two years directly assisting **David Bailey, Helmut Newton and Lester Bookbinder** at **Condé Nast**.\n\nThat apprenticeship trained him to make scale, material and character visible. Harper later founded his own studio and built an approximately thirty five year career.\n\nThe toy cars and horse-drawn carriages collection connects Harper’s studio practice with his wider editorial career. He worked regularly for **Elle** and **The Telegraph Magazine** for more than fifteen years. Other editorial credits included **Vogue, Tatler, Cosmopolitan, Esquire, The Face, Wallpaper** and **Harpers & Queen**. Across his broader career, confirmed clients included **De Beers, Boots, Heinz, Diageo, Harrods, Selfridges, the BBC, CBS Records** and **Montblanc**.\n\nHis experience with real vehicles, products and childhood objects gives the toy-car archive several layers of design context.\n\n## Transport history through play\n\nToy cars can preserve the shapes and aspirations of actual motoring eras. Materials, wheels and mechanisms also document the history of toy manufacture.\n\nArchive.London will identify makers, models and dates only where markings or packaging support them. The horse-and-carriage material should be separated clearly once verified.\n\n## Archive provenance\n\n- **Original category:** Toys 01, Toy Cars\n- **Unique shots:** 67\n- **Total frames:** 238\n- **Recorded subjects:** toy cars and horse with carriage\n- **Photographer:** Robert Harper",
+    "sourceFile": "313_toy_cars_and_horse_drawn_carriages.md",
+    "semanticAbout": [
+      {
+        "@type": "Thing",
+        "name": "Toy cars"
+      },
+      {
+        "@type": "Thing",
+        "name": "Toy horse-drawn carriage"
+      }
+    ],
+    "catalogueFacts": {
+      "unique_images": 67,
+      "total_frames": 238
+    }
+  },
+  {
+    "id": "dolls-barbie-action-man-matryoshka",
+    "path": "/photography-archive/dolls-barbie-action-man-matryoshka/",
+    "title": "Dolls, Barbie, Action Man and Matryoshka",
+    "pageType": "subject_collection",
+    "h1": "Dolls, Barbie, Action Man and Matryoshka",
+    "metaTitle": "Dolls, Barbie and Action Man Archive | Archive.London",
+    "metaDescription": "Explore 95 Robert Harper doll studies across 193 frames, including Barbie, Action Man and matryoshka dolls.",
+    "ogTitle": "Dolls, Barbie and Action Man Archive | Archive.London",
+    "ogDescription": "Explore 95 Robert Harper doll studies across 193 frames, including Barbie, Action Man and matryoshka dolls.",
+    "related": [
+      {
+        "path": "/photography-archive/general-toys-culture-of-play/",
+        "label": "General Toys and the Culture of Play"
+      },
+      {
+        "path": "/photography-archive/soft-toys-cuddly-animals/",
+        "label": "Soft Toys and Cuddly Animals"
+      },
+      {
+        "path": "/photography-archive/children-everyday-life/",
+        "label": "Children and Everyday Life"
+      },
+      {
+        "path": "/photography-archive/fashion/",
+        "label": "Fashion Photography"
+      },
+      {
+        "path": "/photography-archive/antiques-historic-objects/",
+        "label": "Antiques and Historic Objects"
+      },
+      {
+        "path": "/photography-archive/toys-childhood/",
+        "label": "Toys and childhood"
+      }
+    ],
+    "body": "## Characters made for imaginative life\n\nDolls allow identity to be rehearsed through play. Clothes, faces, occupations and accessories create miniature social worlds, while nested matryoshka dolls introduce craft, repetition and surprise.\n\nRobert Harper’s inventory records **95 unique shots across 193 total frames** of dolls, Barbie, Action Man and matryoshka figures. The catalogue spelling “Matroshka” is retained here alongside the editorial spelling matryoshka.\n\n## Robert Harper and the portrait of an object\n\nFor the photographer of dolls, barbie, action man and matryoshka, London followed a Scottish childhood in Glasgow and Islay. Harper received a camera at seven and made his first sale at fourteen with a photograph of **The Who** in concert. Photography studies led to two years at **Condé Nast**, directly assisting **David Bailey, Helmut Newton and Lester Bookbinder**.\n\nThe apprenticeship sharpened his understanding of character, styling and the expressive gaze. Harper later established his own studio and built an approximately thirty five year career.\n\nThe dolls, barbie, action man and matryoshka collection connects Harper’s studio practice with his wider editorial career. He worked regularly for **Elle** and **The Telegraph Magazine** for more than fifteen years. Other editorial credits included **Vogue, Tatler, Cosmopolitan, Esquire, The Face, Wallpaper** and **Harpers & Queen**. Across his broader career, confirmed clients included **De Beers, Boots, Heinz, Diageo, Harrods, Selfridges, the BBC, CBS Records** and **Montblanc**.\n\nThose portrait and fashion skills give the dolls presence without confusing the object with a living sitter.\n\n## Play, gender and collecting\n\nThe named toys carry histories of aspiration, gender roles, action, fashion and adult collecting. Editions, makers and dates must be verified through markings and packaging.\n\nArchive.London presents the photographs as childhood and design history. Trade marks are used descriptively and do not imply commissioning relationships.\n\n## Archive provenance\n\n- **Original category:** Toys 02, Dolls & Barbie\n- **Unique shots:** 95\n- **Total frames:** 193\n- **Recorded subjects:** dolls, Barbie, Action Man and matryoshka\n- **Photographer:** Robert Harper",
+    "sourceFile": "314_dolls_barbie_action_man_matryoshka.md",
+    "semanticAbout": [
+      {
+        "@type": "Thing",
+        "name": "Dolls"
+      },
+      {
+        "@type": "Thing",
+        "name": "Barbie"
+      },
+      {
+        "@type": "Thing",
+        "name": "Action Man"
+      },
+      {
+        "@type": "Thing",
+        "name": "Matryoshka dolls"
+      }
+    ],
+    "catalogueFacts": {
+      "unique_images": 95,
+      "total_frames": 193
+    }
+  },
+  {
+    "id": "chess-playing-cards-classic-games",
+    "path": "/photography-archive/chess-playing-cards-classic-games/",
+    "title": "Chess, Playing Cards and Classic Games",
+    "pageType": "subject_collection",
+    "h1": "Chess, Playing Cards and Classic Games",
+    "metaTitle": "Chess, Playing Cards and Classic Games Archive | Archive.London",
+    "metaDescription": "Discover 90 Robert Harper game studies across 205 frames, including chess, bridge, backgammon and themed sets.",
+    "ogTitle": "Chess, Playing Cards and Classic Games Archive | Archive.London",
+    "ogDescription": "Discover 90 Robert Harper game studies across 205 frames, including chess, bridge, backgammon and themed sets.",
+    "related": [
+      {
+        "path": "/photography-archive/board-games-card-games/",
+        "label": "Board Games and Card Games"
+      },
+      {
+        "path": "/photography-archive/jigsaws-wooden-puzzles/",
+        "label": "Jigsaws and Wooden Puzzles"
+      },
+      {
+        "path": "/photography-archive/gambling/",
+        "label": "Gambling and Games of Chance"
+      },
+      {
+        "path": "/photography-archive/books-publishing/",
+        "label": "Books and Publishing"
+      },
+      {
+        "path": "/photography-archive/general-toys-culture-of-play/",
+        "label": "General Toys and the Culture of Play"
+      },
+      {
+        "path": "/photography-archive/toys-childhood/",
+        "label": "Toys and childhood"
+      }
+    ],
+    "body": "## Strategy arranged on the table\n\nGames turn rules into objects. A chess piece, pack of cards or backgammon board offers not only play, but also typography, illustration, craftsmanship and ritual. The arrangement before a game begins can be as evocative as the competition itself.\n\nRobert Harper’s inventory records **90 unique shots across 205 total frames** of games, chess, playing cards, bridge and backgammon, including Tintin chess and Alice in Wonderland material. The catalogue also records the spelling “Tin Tin”; product editions remain subjects for research.\n\n## Robert Harper’s eye for visual systems\n\nThe training behind chess, playing cards and classic games included two years at **Condé Nast**, where Harper directly assisted **David Bailey, Helmut Newton and Lester Bookbinder** after studying photography in London. Born in Scotland and raised between Glasgow and Islay, he had received a camera at seven and sold a concert photograph of **The Who** at fourteen.\n\nThat apprenticeship taught him how order, contrast and character could coexist within a composed frame. Harper later founded his own studio and built an approximately thirty five year career.\n\nThe chess, playing cards and classic games collection connects Harper’s studio practice with his wider editorial career. He worked regularly for **Elle** and **The Telegraph Magazine** for more than fifteen years. Other editorial credits included **Vogue, Tatler, Cosmopolitan, Esquire, The Face, Wallpaper** and **Harpers & Queen**. Across his broader career, confirmed clients included **De Beers, Boots, Heinz, Diageo, Harrods, Selfridges, the BBC, CBS Records** and **Montblanc**.\n\nHis experience with luxury objects and printed design gives this games collection unusual editorial range.\n\n## Games as art, habit and social ritual\n\nChess and backgammon can be serious strategic pursuits and beautiful designed objects. Playing cards support countless social traditions, while themed sets connect games to illustration and popular culture.\n\nArchive.London will identify editions, manufacturers and dates only from packaging or object evidence. Trade marks and fictional properties are descriptive subjects, not client claims.\n\n## Archive provenance\n\n- **Original category:** Toys 03, Games, Chess, Playing Cards\n- **Unique shots:** 90\n- **Total frames:** 205\n- **Recorded subjects:** chess, cards, bridge, backgammon and themed games\n- **Photographer:** Robert Harper",
+    "sourceFile": "315_chess_playing_cards_and_classic_games.md",
+    "semanticAbout": [
+      {
+        "@type": "Thing",
+        "name": "Chess"
+      },
+      {
+        "@type": "Thing",
+        "name": "Playing cards"
+      },
+      {
+        "@type": "Thing",
+        "name": "Backgammon"
+      }
+    ],
+    "catalogueFacts": {
+      "unique_images": 90,
+      "total_frames": 205
+    }
+  },
+  {
+    "id": "general-toys-culture-of-play",
+    "path": "/photography-archive/general-toys-culture-of-play/",
+    "title": "General Toys and the Culture of Play",
+    "pageType": "subject_collection",
+    "h1": "General Toys and the Culture of Play",
+    "metaTitle": "General Toys and Childhood Play Archive | Archive.London",
+    "metaDescription": "Explore 204 Robert Harper toy studies across 588 frames, documenting a broad culture of childhood play and design.",
+    "ogTitle": "General Toys and Childhood Play Archive | Archive.London",
+    "ogDescription": "Explore 204 Robert Harper toy studies across 588 frames, documenting a broad culture of childhood play and design.",
+    "related": [
+      {
+        "path": "/photography-archive/toy-cars-horse-drawn-carriages/",
+        "label": "Toy Cars and Horse-Drawn Carriages"
+      },
+      {
+        "path": "/photography-archive/dolls-barbie-action-man-matryoshka/",
+        "label": "Dolls, Barbie, Action Man and Matryoshka"
+      },
+      {
+        "path": "/photography-archive/jigsaws-wooden-puzzles/",
+        "label": "Jigsaws and Wooden Puzzles"
+      },
+      {
+        "path": "/photography-archive/model-boats-planes-construction-sets/",
+        "label": "Model Boats, Planes and Construction Sets"
+      },
+      {
+        "path": "/photography-archive/toys-childhood/",
+        "label": "Toys and Childhood"
+      }
+    ],
+    "body": "## The unruly richness of the toy cupboard\n\nA general toy collection resists a single theme, and that is its charm. Objects designed for imagination, learning, movement, comfort and amusement gather together into a portrait of childhood culture.\n\nRobert Harper’s inventory records **204 unique shots across 588 total frames** of a wide variety of toys. It is one of the archive’s largest play categories.\n\n## Robert Harper and the character of objects\n\nHarper was born in Scotland and grew up between Glasgow and Islay. He received his first camera at seven, a childhood object that became the instrument of his life. At fourteen, he sold a photograph taken at a concert by **The Who**.\n\nHe moved to London to study photography and spent two formative years at **Condé Nast**, directly assisting **David Bailey, Helmut Newton and Lester Bookbinder**. Harper later established his own studio and built an approximately thirty five year career.\n\nThe general toys and the culture of play collection connects Harper’s studio practice with his wider editorial career. He worked regularly for **Elle** and **The Telegraph Magazine** for more than fifteen years. Other editorial credits included **Vogue, Tatler, Cosmopolitan, Esquire, The Face, Wallpaper** and **Harpers & Queen**. Across his broader career, confirmed clients included **De Beers, Boots, Heinz, Diageo, Harrods, Selfridges, the BBC, CBS Records** and **Montblanc**.\n\nHis ability to give products personality makes the general toy archive visually coherent despite its variety.\n\n## Childhood, commerce and imagination\n\nToys can reveal ideas about education, gender, technology and family life. Materials and packaging also trace manufacturing and retail history.\n\nIndividual play types remain subjects for research within the original physical collection. Brands and dates require object-level evidence.\n\n## Archive provenance\n\n- **Original category:** Toys 04, General\n- **Unique shots:** 204\n- **Total frames:** 588\n- **Recorded subject:** varied toys\n- **Photographer:** Robert Harper",
+    "sourceFile": "316_general_toys_and_culture_of_play.md",
+    "semanticAbout": [
+      {
+        "@type": "Thing",
+        "name": "Toys"
+      },
+      {
+        "@type": "Thing",
+        "name": "Childhood play"
+      }
+    ],
+    "catalogueFacts": {
+      "unique_images": 204,
+      "total_frames": 588
+    }
+  },
+  {
+    "id": "jigsaws-wooden-puzzles",
+    "path": "/photography-archive/jigsaws-wooden-puzzles/",
+    "title": "Jigsaws and Wooden Puzzles",
+    "pageType": "subject_collection",
+    "h1": "Jigsaws and Wooden Puzzles",
+    "metaTitle": "Jigsaws and Wooden Puzzles Archive | Archive.London",
+    "metaDescription": "Discover 26 Robert Harper jigsaw and wooden-puzzle studies preserved across 106 photographic frames.",
+    "ogTitle": "Jigsaws and Wooden Puzzles Archive | Archive.London",
+    "ogDescription": "Discover 26 Robert Harper jigsaw and wooden-puzzle studies preserved across 106 photographic frames.",
+    "related": [
+      {
+        "path": "/photography-archive/chess-playing-cards-classic-games/",
+        "label": "Chess, Playing Cards and Classic Games"
+      },
+      {
+        "path": "/photography-archive/board-games-card-games/",
+        "label": "Board Games and Card Games"
+      },
+      {
+        "path": "/photography-archive/general-toys-culture-of-play/",
+        "label": "General Toys and the Culture of Play"
+      },
+      {
+        "path": "/photography-archive/wooden-toys-lego/",
+        "label": "Wooden Toys"
+      },
+      {
+        "path": "/photography-archive/books-publishing/",
+        "label": "Books and Publishing"
+      },
+      {
+        "path": "/photography-archive/toys-childhood/",
+        "label": "Toys and childhood"
+      }
+    ],
+    "body": "## Pleasure in the unfinished picture\n\nA puzzle is an object defined by incompleteness. Jigsaws turn an image into fragments and ask the player to restore order, while wooden puzzles make shape, fit and touch part of the challenge.\n\nRobert Harper’s inventory records **26 unique shots across 106 total frames** of jigsaws and wooden puzzles.\n\n## Robert Harper and the arranged fragment\n\nThe jigsaws and wooden puzzles photographs draw on an education that began with a camera at seven. Scottish-born Harper grew up between Glasgow and Islay and sold a **The Who** concert photograph aged fourteen. He studied photography in London before two years directly assisting **David Bailey, Helmut Newton and Lester Bookbinder** at **Condé Nast**.\n\nThat experience trained him to build order within a frame, making the puzzle an especially apt still-life subject. Harper later founded his own studio and built an approximately thirty five year career.\n\nThe jigsaws and wooden puzzles collection connects Harper’s studio practice with his wider editorial career. He worked regularly for **Elle** and **The Telegraph Magazine** for more than fifteen years. Other editorial credits included **Vogue, Tatler, Cosmopolitan, Esquire, The Face, Wallpaper** and **Harpers & Queen**. Across his broader career, confirmed clients included **De Beers, Boots, Heinz, Diageo, Harrods, Selfridges, the BBC, CBS Records** and **Montblanc**.\n\nHis editorial discipline transforms pieces, boxes and incomplete images into compositions with narrative tension.\n\n## Education, patience and graphic history\n\nPuzzle imagery can preserve illustration, printing and childhood learning, while wooden forms may reveal craftsmanship and early educational design.\n\nArchive.London will identify manufacturers, titles and dates from packaging or markings. Historical products should not be assumed to meet current toy-safety requirements.\n\n## Archive provenance\n\n- **Original category:** Toys 05, Jigsaws & Wooden Puzzles\n- **Unique shots:** 26\n- **Total frames:** 106\n- **Recorded subjects:** jigsaws and wooden puzzles\n- **Photographer:** Robert Harper",
+    "sourceFile": "317_jigsaws_and_wooden_puzzles.md",
+    "semanticAbout": [
+      {
+        "@type": "Thing",
+        "name": "Jigsaw puzzles"
+      },
+      {
+        "@type": "Thing",
+        "name": "Wooden puzzles"
+      }
+    ],
+    "catalogueFacts": {
+      "unique_images": 26,
+      "total_frames": 106
+    }
+  },
+  {
+    "id": "model-boats-planes-construction-sets",
+    "path": "/photography-archive/model-boats-planes-construction-sets/",
+    "title": "Model Boats, Planes and Construction Sets",
+    "pageType": "subject_collection",
+    "h1": "Model Boats, Planes and Construction Sets",
+    "metaTitle": "Model Boats and Planes Photography Archive | Archive.London",
+    "metaDescription": "Explore 29 Robert Harper model studies across 114 frames, including boats, aircraft and construction sets.",
+    "ogTitle": "Model Boats and Planes Photography Archive | Archive.London",
+    "ogDescription": "Explore 29 Robert Harper model studies across 114 frames, including boats, aircraft and construction sets.",
+    "related": [
+      {
+        "path": "/photography-archive/toy-cars-horse-drawn-carriages/",
+        "label": "Toy Cars and Horse-Drawn Carriages"
+      },
+      {
+        "path": "/photography-archive/aviation/",
+        "label": "Aviation Photography"
+      },
+      {
+        "path": "/photography-archive/marine-superyachts/",
+        "label": "Marine and Superyachts"
+      },
+      {
+        "path": "/photography-archive/transport/",
+        "label": "Transport"
+      },
+      {
+        "path": "/photography-archive/wooden-toys-lego/",
+        "label": "Wooden Toys"
+      },
+      {
+        "path": "/photography-archive/toys-childhood/",
+        "label": "Toys and childhood"
+      }
+    ],
+    "body": "## The world rebuilt at a smaller scale\n\nModels invite close attention because they condense engineering and imagination. A boat or plane can be studied in the hand, while construction sets make the process of building part of the play.\n\nRobert Harper’s inventory records **29 unique shots across 114 total frames** of model boats, planes, sets and related objects.\n\n## Robert Harper’s sensitivity to scale\n\nFor the photographer of model boats, planes and construction sets, London followed a Scottish childhood in Glasgow and Islay. Harper received a camera at seven and made his first sale at fourteen with a photograph of **The Who** in concert. Photography studies led to two years at **Condé Nast**, directly assisting **David Bailey, Helmut Newton and Lester Bookbinder**.\n\nThe apprenticeship trained him to communicate proportion, surface and character through controlled light. Harper later established his own studio and built an approximately thirty five year career.\n\nThe model boats, planes and construction sets collection connects Harper’s studio practice with his wider editorial career. He worked regularly for **Elle** and **The Telegraph Magazine** for more than fifteen years. Other editorial credits included **Vogue, Tatler, Cosmopolitan, Esquire, The Face, Wallpaper** and **Harpers & Queen**. Across his broader career, confirmed clients included **De Beers, Boots, Heinz, Diageo, Harrods, Selfridges, the BBC, CBS Records** and **Montblanc**.\n\nHis archive spans real transport, mechanical objects and toys, giving model photography a valuable comparative context.\n\n## Engineering, collecting and imagination\n\nModels may be toys, kits, display objects or serious replicas. That distinction should be made from scale, packaging and construction evidence rather than assumed.\n\nArchive.London presents the collection as design and play history. Makers, model types and dates should be verified before publication.\n\n## Archive provenance\n\n- **Original category:** Toys 06, Models\n- **Unique shots:** 29\n- **Total frames:** 114\n- **Recorded subjects:** model boats, planes, sets and related objects\n- **Photographer:** Robert Harper",
+    "sourceFile": "318_model_boats_planes_and_construction_sets.md",
+    "semanticAbout": [
+      {
+        "@type": "Thing",
+        "name": "Model boats"
+      },
+      {
+        "@type": "Thing",
+        "name": "Model aircraft"
+      },
+      {
+        "@type": "Thing",
+        "name": "Construction sets"
+      }
+    ],
+    "catalogueFacts": {
+      "unique_images": 29,
+      "total_frames": 114
+    }
+  },
+  {
+    "id": "board-games-card-games",
+    "path": "/photography-archive/board-games-card-games/",
+    "title": "Board Games and Card Games",
+    "pageType": "subject_collection",
+    "h1": "Board Games and Card Games",
+    "metaTitle": "Board Games and Card Games Archive | Archive.London",
+    "metaDescription": "Discover 85 Robert Harper board-game and card-game studies preserved across 292 photographic frames.",
+    "ogTitle": "Board Games and Card Games Archive | Archive.London",
+    "ogDescription": "Discover 85 Robert Harper board-game and card-game studies preserved across 292 photographic frames.",
+    "related": [
+      {
+        "path": "/photography-archive/chess-playing-cards-classic-games/",
+        "label": "Chess, Playing Cards and Classic Games"
+      },
+      {
+        "path": "/photography-archive/jigsaws-wooden-puzzles/",
+        "label": "Jigsaws and Wooden Puzzles"
+      },
+      {
+        "path": "/photography-archive/gambling/",
+        "label": "Gambling and Games of Chance"
+      },
+      {
+        "path": "/photography-archive/general-toys-culture-of-play/",
+        "label": "General Toys and the Culture of Play"
+      },
+      {
+        "path": "/photography-archive/parties-entertaining/",
+        "label": "Parties and Entertaining"
+      },
+      {
+        "path": "/photography-archive/toys-childhood/",
+        "label": "Toys and childhood"
+      }
+    ],
+    "body": "## The table becomes a world\n\nBoard and card games create temporary societies. Rules are agreed, pieces acquire power and the dining table becomes a landscape of competition, luck and conversation.\n\nRobert Harper’s inventory records **85 unique shots across 292 total frames** of board games, card games and other games.\n\n## Robert Harper and the composed table\n\nThe training behind board games and card games included two years at **Condé Nast**, where Harper directly assisted **David Bailey, Helmut Newton and Lester Bookbinder** after studying photography in London. Born in Scotland and raised between Glasgow and Islay, he had received a camera at seven and sold a concert photograph of **The Who** at fourteen.\n\nThat experience taught him how multiple objects can form a clear hierarchy within a frame. Harper later founded his own studio and built an approximately thirty five year career.\n\nThe board games and card games collection connects Harper’s studio practice with his wider editorial career. He worked regularly for **Elle** and **The Telegraph Magazine** for more than fifteen years. Other editorial credits included **Vogue, Tatler, Cosmopolitan, Esquire, The Face, Wallpaper** and **Harpers & Queen**. Across his broader career, confirmed clients included **De Beers, Boots, Heinz, Diageo, Harrods, Selfridges, the BBC, CBS Records** and **Montblanc**.\n\nHis skill with product groups and social subjects makes games a natural bridge between still life and human ritual.\n\n## Leisure, illustration and family memory\n\nGame boxes and boards preserve graphic design, popular culture and changing ideas of family entertainment. Editions, makers and dates require packaging evidence.\n\nArchive.London treats the collection as cultural history, not merely a list of products. Rules or game content should not be inferred where the object is incomplete.\n\n## Archive provenance\n\n- **Original category:** Toys 07, Games\n- **Unique shots:** 85\n- **Total frames:** 292\n- **Recorded subjects:** board games, card games and other games\n- **Photographer:** Robert Harper",
+    "sourceFile": "319_board_games_and_card_games.md",
+    "semanticAbout": [
+      {
+        "@type": "Thing",
+        "name": "Board games"
+      },
+      {
+        "@type": "Thing",
+        "name": "Card games"
+      }
+    ],
+    "catalogueFacts": {
+      "unique_images": 85,
+      "total_frames": 292
+    }
+  },
+  {
     "id": "corporate-technology",
     "path": "/photography-archive/corporate-technology/",
     "title": "Corporate and technology",
@@ -12097,6 +12661,10 @@
       {
         "path": "/photography-archive/abstract/",
         "label": "Abstract photography"
+      },
+      {
+        "path": "/photography-archive/torches-portable-light/",
+        "label": "Torches and Portable Light"
       }
     ],
     "body": "# Page copy\n\n## Candles and decorative light\n\n# Candlelight, a small flame with social ambitions\n\nNothing flatters a dinner, a face or a room quite like candlelight. It is technically unreliable, socially indispensable and always convinced the evening ought to continue.\n\nThe Robert Harper Photograph Library contains **803 unique candle photographs across 1,267 frames**, organised through three inventory folders. Candles, holders, sconces and candlesticks appear in still life, while extensive sequences record flames flickering through successive exposures.\n\n## Light photographing light\n\nA lit candle asks photography to manage two opposing demands. The flame must retain brightness and shape, while the surrounding object and room remain visible. Wax, glass, metal and shadow each respond at a different pace.\n\nHarper's command of studio lighting made him especially sensitive to that balance. The photographer who could define a diamond or perfume bottle without flattening it understood that illumination is most persuasive when it feels inevitable.\n\nThe repeated flame sequences also introduce time. Tiny differences between frames turn a still-life category into something closer to performance. The candle bends, flares and steadies, never making quite the same picture twice.\n\n## Ceremony and atmosphere\n\nCandles move easily between celebration, religion, romance, domestic comfort and decoration. Their holders carry histories of design, from formal candlesticks to wall sconces and contemporary objects.\n\nWithin Harper's wider archive, they connect naturally to interiors, Christmas, parties, weddings and dining. They are both objects and makers of atmosphere, which explains their enduring place in editorial photography.\n\n### Related collections\n\n- [Interiors and design](/photography-archive/interiors-design/)\n- [Christmas](/photography-archive/christmas/)\n- [Parties and entertaining](/photography-archive/parties-entertaining/)\n- [Abstract photography](/photography-archive/abstract/)\n\n[Enquire about candle photography]",
@@ -12378,6 +12946,10 @@
       {
         "path": "/photography-archive/advertising/",
         "label": "Advertising"
+      },
+      {
+        "path": "/photography-archive/telephones-mobiles-pagers-fax-machines/",
+        "label": "Telephones, Mobiles, Pagers and Fax Machines"
       }
     ],
     "body": "# Page copy\n\n## Telephones and communication\n\n# Telephones, society at the other end of the line\n\nThe telephone once occupied a room with great confidence. It rang, everyone heard it, and private conversation depended on the length of a cord.\n\nRobert Harper's archive contains **130 unique telephone and communications photographs across 305 frames**. Landlines, early mobile telephones, pagers and fax machines trace the remarkable compression of technology from furniture to pocket companion.\n\n## When connection looked new\n\nHarper's wider corporate inventory refers to the first Motorola phone and important moments in communications technology. The catalogue wording is a starting point for research into individual devices and dates, during an era when mobility itself was the attraction.\n\nHis still-life experience gave technical objects presence. Buttons, screens, aerials and handsets had to be clear, yet the photograph also needed to suggest the modern life they promised.\n\nThe fax machine now carries the glamour of office history. Pagers recall a world of selective urgency. Early mobiles, large and unapologetic, became social signals as much as practical tools.\n\n## Communication as social portrait\n\nThese devices record changing manners. The shared household telephone gave way to personal availability. Business communication escaped the office. The object became smaller as its place in daily life became larger.\n\nHarper's archive captures that transition with the polished eye of a photographer who worked across magazines, advertising and major commercial assignments.\n\n### Related collections\n\n- [Corporate technology](/photography-archive/corporate-technology/)\n- [Office life](/photography-archive/office/)\n- [London photography](/photography-archive/london/)\n- [Advertising](/photography-archive/advertising/)\n\n[Enquire about communications photography]",
