@@ -5,8 +5,15 @@ import {parse} from 'yaml';
 const changes=[];
 const pages=[];
 const additionalNames={34:'Cats',35:'Candles and light',36:'Eyewear',37:'Stationery and writing',38:'Music objects and audio',39:'Books and publishing',41:'Art and artists’ materials',42:'Christmas',43:'Telephones and communication',44:'Transport',45:'Water and underwater',46:'Travel goods and accessories',47:'Silver and decorative objects',48:'Smoking and tobacco culture',49:'Parties and entertaining',50:'Bedrooms and sleep',51:'Pet accessories'};
+Object.assign(additionalNames,{52:'Gifts and wrapping',53:'Haberdashery and textiles',54:'Medical objects',55:'Money and credit',56:'Office life',57:'Optics and seeing',58:'Religion and ritual',59:'Shells, pebbles and fossils',60:'Umbrellas, canes and fans'});
 const names=['Archive.London','Photography archive','Robert Harper','Fashion','Jewellery','Beauty and cosmetics','Fragrance','Portraits','Musicians and bands','London','Scotland','Places and travel','Designer footwear','Handbags and bags','Watches','Food','Drinks','Interiors and design','Polaroids','Analogue photography','Motor racing','Aviation','Garden and botanical','Marine and superyachts','Kitchen and tableware','Bathroom and bathing','Hair and grooming','Toys and childhood','Sport','Landscapes','Corporate and technology','Weddings','Advertising'];
 const edits=[
+  [/Its relatively high frame count reflects the careful adjustments required to make folds, ties, boxes and reflective paper appear effortless\./g,'The frame count records the larger set of exposures, distinct from the number of unique photographs. Folds, ties, boxes and reflective paper give the collection its visual detail.'],
+  [/The archive should present these photographs historically and responsibly\. It must not attach medical advice, efficacy claims or diagnoses that are absent from the source material\./g,'These photographs document historical material and the visual culture of healthcare; they do not provide clinical advice.'],
+  [/Exact claims about first issues or technological milestones must be verified against individual images before publication\./g,'The dates and issue histories of individual items remain subjects for archival research.'],
+  [/Because the dedicated total is modest, this page should gather related material through links rather than merging counts from separate categories\./g,'The dedicated office count remains separate from related corporate, communications and stationery holdings.'],
+  [/Cultural sensitivity is equally important\. These subjects should not be flattened into decoration or treated as interchangeable signs of mystery\./g,'The objects also have distinct cultural, devotional and ritual contexts beyond their visual qualities.'],
+  [/Captions must use accurate terminology where it can be verified\. The page should distinguish devotional, cultural and occult material rather than forcing everything into one mood\./g,'Devotional, cultural and occult material are approached through their individual contexts, with identification and terminology grounded in the surviving records.'],
   [/Detailed claims must be confirmed at image level, but the material clearly belongs to an era when mobility itself was the attraction\./g,'The catalogue wording is a starting point for research into individual devices and dates, during an era when mobility itself was the attraction.'],
   [/although individual locations must never be assumed without evidence/g,'while the locations of individual photographs remain separate questions for research'],
   [/Michael Palin's satchel/g,'a satchel associated in the catalogue with Michael Palin'],
@@ -69,12 +76,17 @@ for(const filename of (await fs.readdir('content/source')).sort()){
   const [,front,body]=raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/);
   const meta=parse(front);
   const sourceMetaDescription=meta.meta_description;
+  const sourceMetaTitle=meta.meta_title;
   let copy=body.trim();
   for(const [pattern,replacement] of edits){copy=copy.replace(pattern,match=>{changes.push({file:filename,original:match,replacement,reason:'Convert production guidance to reader-facing language or qualify an unverified assertion.'});return replacement;});}
   copy=copy.replace(/[\u2013\u2014]/g,',').replace(/\n{3,}/g,'\n\n');
   if(filename.startsWith('15_')) meta.meta_description="Explore Robert Harper's watch photography, including designer timepieces, Swatch, Mackintosh-related designs and TAG Heuer Monaco catalogue material.";
   if(filename.startsWith('46_')) meta.meta_description="Explore 151 travel-accessory photographs by Robert Harper, including maps, globes, luggage and a satchel catalogued in association with Michael Palin.";
   if(filename.startsWith('48_')) meta.meta_description="Explore 96 historical smoking photographs by Robert Harper, including pipes, lighters, cigars, cigarettes and material associated with Charlie Chaplin.";
+  if(filename.startsWith('54_')) meta.meta_title='Medical Objects and Healthcare Photography | Archive.London';
+  if(filename.startsWith('57_')) meta.meta_title='Optics, Binoculars and Lenses Archive | Archive.London';
+  if(filename.startsWith('60_')) meta.meta_title='Umbrellas, Canes and Fans Photography Archive | Archive.London';
+  if(meta.meta_title!==sourceMetaTitle)changes.push({file:filename,field:'meta_title',original:sourceMetaTitle,replacement:meta.meta_title,reason:'Keep the search title concise while preserving its subject.'});
   if(meta.meta_description!==sourceMetaDescription)changes.push({file:filename,field:'meta_description',original:sourceMetaDescription,replacement:meta.meta_description,reason:'Describe an object association without asserting unverified personal ownership.'});
   const index=Number(filename.slice(0,2))-1;
   const path=new URL(meta.url).pathname;
